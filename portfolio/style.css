@@ -315,8 +315,6 @@ font-weight: bold;
   text-align: center;
 }
 
-@media (min)
-
 .keepInTouchText {
   background-color: rgba(211,211,211, .4);
   border-style:none;
