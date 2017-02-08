@@ -3,9 +3,16 @@
 
 @media (max-width: 800px) {
   .h1 {
-padding-top: 5%;
+    padding-top: 5%;}
+  
     
+    .nav-pills >li>a{
+float:left!important;
 }
+  
+  footer {
+    display: block;
+  }
   
   .center-block {
     margin-left:auto;
@@ -98,7 +105,7 @@ margin-right: 0px;
 }
 
 .navbar-static-top {
-margin-bottom: -60px;
+margin-bottom: -70px;
 }
 
 .navbar-static-bottom >li > a {
@@ -288,8 +295,7 @@ background: url("http://i65.tinypic.com/sdpu1g.jpg");
 
 .form-group {
 font-size: 20px;
-  padding-left: 2%;
-  background-color: black;
+padding-left: 5%;
   
 }
 
@@ -309,19 +315,23 @@ margin-top: 5%;
 #h2 {
 font-family: times;
   color: rgba(0,0,0, 1);
-  text-shadow: 2px 2px 4px rgba(147,147,147, 1);
+  text-shadow: 4px 4px 4px rgba(147,147,147, 1);
 font-size: 30px;
 font-weight: bold;
   text-align: center;
 }
 
-@media (min)
+@media(min-width:1200px;) {
+  .keepInTouchText {
+margin-top: 15%!important;
+}
+}
 
 .keepInTouchText {
-  background-color: rgba(211,211,211, .4);
+  background-color: rgba(255,255,255, .7);
   border-style:none;
   text-align: justify;
- 
+ margin-top: 30px;
   
 }
 
@@ -329,7 +339,6 @@ font-weight: bold;
   font-family: times;
   font-size: 25px;
   color:black;
-  display: block;
   text-align: justified;
 }
 
@@ -378,4 +387,5 @@ margin-top:-200px;
 .nav-pills >li>a{
 height:100px;
   width: 150px;
+  background-color: rgba(147,147,147, 1)
 }
