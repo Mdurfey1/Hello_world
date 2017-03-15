@@ -194,8 +194,9 @@ background-color: rgba(211, 211, 211, .8);
 }
 
 .headshot {
-height: auto;
-  width: auto;
+border-radius: 50%;
+border-width: 1px;
+
 }
 
 .buttons{
