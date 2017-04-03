@@ -216,11 +216,11 @@ text-shadow: 2px 3px 5px rgba(147, 147, 147, 1)
 
 /*Portfolio CSS Start~~~~~~~~*/
 
-div.back2 {
+.back2 {
 background: url("http://i67.tinypic.com/65rjme.jpg");
 background-repeat: no-repeat;
   background-size: cover;
-  
+  background-position: center;
 }
 
 .well {
@@ -228,23 +228,28 @@ background-repeat: no-repeat;
 }
 
 .wellDiv {
-  background-color: rgba(211, 211, 211, .0);
+  background-color: rgba(211, 211, 211, .9);
   border-style: none;
   margin-right: 2%;
   margin-left: 2%;
   margin-top: 2%;
 }
 
-figure > img {
-max-height: 500px;
-  max-width: 500px;
-  padding: 15px;
+.portfolioPic:hover {
+  cursor: pointer;
+}
+
+.portfolioPic {
+
+width: 100%;
+  padding: 10px;
 padding-bottom: 1px;
   display: flex;
+  position: center;
 }
 
 figure {
-margin-bottom: 15px;
+margin-bottom: 3%;
 }
 
 .figure-caption {

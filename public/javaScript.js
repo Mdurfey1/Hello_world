@@ -1,7 +1,34 @@
+$(document).ready(function (){
 
-$('#submitButton').click(function(){ 
-var userInfo = $(document).getElementById(".form-horizontal").value;
-$.post()
+var wikiTopMargin = Math.floor(document.getElementById("twitchHeight").height/85) + "%";
+
+console.log(wikiTopMargin);
+
+
+
+$("#wikiView").css('margin-top', `${wikiTopMargin}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })
