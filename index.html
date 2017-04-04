@@ -50,13 +50,12 @@
   <div class ="row">
     <div class = "col-lg-12">
   <!--h1-->
-      <h1 class="h1 text-center" style="font-size: 60px;"><strong>Front-End Developer</strong></h1>
+      <h1 class="h1 text-center" style="font-size: 60px;">Software Engineer</h1>
       <div class ="imgdiv">
-        <img class = "img-responsive img-thumbnail headshot center-block" alt = "profile pic" src="http://i64.tinypic.com/24vrvis.jpg" style = "max-width: 15%; max-height: 15%" ></img>
+        <img class = "img-responsive headshot center-block" alt = "profile pic" src="http://i64.tinypic.com/24vrvis.jpg" style = "max-width: 12%; max-height: 12%" ></img>
       </div> 
-      <h2 class = "h2 text-center">Devoted to functional programming and information architecture.</h2>
-
-      <hr class = "border">
+  
+      <hr class = "border" style = "margin-top: 25px; margin-bottom: 25px; border-color: black; border-style: solid">
     
       <div class = "buttons text-center" role = "group">
         <a class = "btn btn-default" role = "button" target = "_blank" href = "https://www.linkedin.com/in/michael-durfey-5bb67736"><i class = "fa fa-linkedin-square fa-lg fa-fw"></i>&nbsp Linkedin</a>
@@ -77,6 +76,7 @@
       <div class = "row">
         <h5 class = "h5 text-center" ><strong>Portfolio</strong></h5>
         <hr class = "hr2">      
+        <br>
           <div class = "col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <figure class="figure">
               <img src="http://i65.tinypic.com/2u7m51d.png" onclick = "window.open('https://weathercurrent.herokuapp.com')" class="figure-img img-fluid rounded center-block portfolioPic" alt="weather app">
@@ -108,83 +108,89 @@
 
 <!-- Contact -->
 <div class = "contact-container container-fluid" id = "bottom">
-<div class = "col-lg-12">
+  <div class = "col-lg-12">
         <h2 class="h5 text-center">Contact</h>       
         <hr class = "hr2">
-  <div class = "row first-content">
-    <div class = "col-lg-5 col-md-5">
-<!--     <div class = "contact"> -->
-<!--     <div class = "row"> -->
-      <form class = "form-horizontal"> <!--form-->
+    <div class = "row first-content">
+      <div class = "col-lg-5 col-md-5">
+        <form class = "form-horizontal"> <!--form-->
 
-        <div class="form-group">
-          <label for="smFormGroupInput" class="col-xs-3 col-sm-2 col-md-3 col-lg-3 col-form-label col-form-label-sm">Name</label>
+          <div class="form-group">
+            <label for="smFormGroupInput" class="col-xs-3 col-sm-2 col-md-3 col-lg-3 col-form-label col-form-label-sm">Name</label>
 
-          <div class="col-lg-12 col-sm-8 col-md-12 col-xs-10 col-xs-offset-1">
-            <input type="text" class="form-control" id="FormGroupInput" placeholder="First Last">
+            <div class="col-lg-12 col-sm-8 col-md-12 col-xs-10 col-xs-offset-1">
+              <input type="text" class="form-control" id="FormGroupInput" placeholder="First Last">
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="smFormGroupInput" class="col-xs-3 col-md-2 col-sm-2 col-lg-3 col-form-label col-form-label-sm">Email</label>
-          <div class="col-lg-12 col-md-12 col-sm-8 col-xs-10 col-xs-offset-1">
-            <input type="email" class="form-control" id="FormGroupInput" placeholder="you@example.com">
+          <div class="form-group">
+            <label for="smFormGroupInput" class="col-xs-3 col-md-2 col-sm-2 col-lg-3 col-form-label col-form-label-sm">Email</label>
+            <div class="col-lg-12 col-md-12 col-sm-8 col-xs-10 col-xs-offset-1">
+              <input type="email" class="form-control" id="FormGroupInput" placeholder="you@example.com">
+            </div>
           </div>
-        </div>
         
-        <div class="form-group">
-          <label for="smFormGroupInput" class="col-xs-3 col-sm-2 col-md-2 col-lg-3 col-form-label col-form-label-sm">Phone</label>
-          <div class="col-lg-12 col-sm-8 col-md-12 col-xs-10 col-xs-offset-1">
-            <input type="text" class="form-control" id="FormGroupInput" placeholder="xxx-xxx-xxxx">
+          <div class="form-group">
+            <label for="smFormGroupInput" class="col-xs-3 col-sm-2 col-md-2 col-lg-3 col-form-label col-form-label-sm">Phone</label>
+            <div class="col-lg-12 col-sm-8 col-md-12 col-xs-10 col-xs-offset-1">
+              <input type="text" class="form-control" id="FormGroupInput" placeholder="xxx-xxx-xxxx">
+            </div>
           </div>
-        </div>
         
-        <div class="form-group">
-          <label for="smFormGroupInput" class=" col-xs-3 col-sm-2 col-md-2 col-lg-3 col-form-label col-form-label-sm">Message</label>
-          <div class="col-lg-12 col-md-12 col-sm-8 col-xs-10 col-xs-offset-1">   
-            <textarea class = "form-control" rows ="3" placeholder = "What's up?" required></textarea>
+          <div class="form-group">
+            <label for="smFormGroupInput" class=" col-xs-3 col-sm-2 col-md-2 col-lg-3 col-form-label col-form-label-sm">Message</label>
+            <div class="col-lg-12 col-md-12 col-sm-8 col-xs-10 col-xs-offset-1">   
+              <textarea class = "form-control" rows ="3" placeholder = "What's up?" required></textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <div class = "col-lg-3 col-md-3 col-sm-3 col-sm-offset-2 col-xs-3">
-          <button type="submit" class = "btn btn-default btn-info btn-lg" id ="submitButton"><i class = "fa fa-paper-plane"></i>Send</button>
+          <div class="form-group">
+            <div class = "col-lg-3 col-md-3 col-sm-3 col-sm-offset-2 col-xs-3">
+            <button type="submit" class = "btn btn-default btn-info btn-lg" id ="submitButton"><i class = "fa fa-paper-plane"></i>Send</button>
+            </div>
           </div>
-        </div>
+        </form>  <!--form-->
+      </div><!--col-lg-5-->
 
-      </form>  <!--form-->
-  </div><!--col-lg-5-->
-    <div class = "row">
+    <!-- <div class = "row"> -->
       <div class = " col-lg-5 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 well keepInTouchText">
         <p id = "h2">Keep in touch!</p>
         <hr class = "hr2">
-        <h3 class = "comments">Be it to request more info about myself or my experience, to ask for my resume, tips on how to play jazz on guitar, comments/questions regarding the photos I took on this page, or even if only to grab a coffee here in San Francisco, feel free to drop me a line anytime.
+        <h3 class = "comments">Be it to request more info about myself or my experience, 
+        to ask for my resume, tips on how to play jazz on guitar, 
+        comments/questions regarding the photos I took on this page, 
+        or even if only to grab a coffee here in San Francisco, 
+        feel free to drop me a line anytime.
         <br></br>
         I promise to reply A.S.A.P.
         </h3>
       </div>  
+    </div>
   </div>
-  </div><!--row-->
 
-<!-- </div>contact  -->
 
-  
-</div>
+ <div class = "row">
+  <div class = "col-lg-12">
 
-<div class = "container-fluid footer-container ">
+  <div class = " col-lg-4 col-lg-offset-4 text-center recent-tracks text-center" id = "recent-tracks">
 
-    <div class="col-lg-12"> 
+  </div>
+  </div>
+ </div>
+
+
+
+  <div class = "container-fluid footer-container ">
+    <div class="col-lg-12 col-md-12 col-sm-8 col-xs-4"> 
       <footer class = "footer">
-    <a class = "nav navbar-brand text-center"style = "color:black;"><p>Made with Coffee and <i class = "fa fa-music"></i><br> by Michael Durfey</p></a>
-        
-      <ul class="nav nav-pills navbar-static-bottom footer-links"> 
-         <li><a href="https://github.com/Mdurfey1" target ="_blank">GitHub</a></li> 
+        <a class = "nav navbar-brand text-center footerText"style = "color:black;"><p>Made with Coffee and <i class = "fa fa-music"></i><br> by Michael Durfey</p></a>
+        <ul class="nav nav-pills navbar-static-bottom footer-links"> 
+          <li><a href="https://github.com/Mdurfey1" target ="_blank">GitHub</a></li> 
           <li><a href="https://twitter.com/Michaelpietro_"target ="_blank">Twitter</a></li> 
-         <li><a href="https://www.linkedin.com/in/michael-durfey-5bb67736"target ="_blank">Linkedin</a></li> 
-          <li><a href="https://www.facebook.com/michael.pietro"target ="_blank">Facebook</a></li>  
-      </ul> 
-       
-  <!--Contact Div aka col-lg-12-->
+          <li><a href="https://www.linkedin.com/in/michael-durfey-5bb67736"target ="_blank">Linkedin</a></li> 
+          <li><a href="https://www.facebook.com/michael.pietro"target ="_blank">Facebook</a></li>
+        </ul> 
       </footer>
+    </div>
   </div>
-</div>
+</div><!--contact-container-->
