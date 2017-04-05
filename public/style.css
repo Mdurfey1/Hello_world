@@ -5,14 +5,6 @@
   .h1 {
     padding-top: 5%;}
   
-    
-    .nav-pills >li>a{
-float:left!important;
-}
-  
-  footer {
-    display: block;
-  }
   
   .center-block {
     margin-left:auto;
@@ -53,7 +45,7 @@ text-shadow: 5px 3px 6px rgba(147,147,147, 1);
     font-size: 38px!important
 }
   .headshot {
-max-width: 40%!important;
+max-width: 20%!important;
 }
   
   .WebDev {
@@ -375,8 +367,58 @@ font-color: white;
 
 
 /* Footer */
+@media(max-width: 800px) {
 .footer {
-margin-top: 400px;
+  background-color: rgba(147,147,147,.8);
+  margin-right: 0px;
+  width: 637px;
+  display: block;
+}
+}
+@media(max-width: 660px) {
+.footer {
+  width: 279px;
+  background-color: rgba(147,147,147,.8);
+  display: block;
+}
+.nav-pills >li>a{
+  background-color: rgba(147,147,147, 1);
+  height: 55px;
+  width: 66px;
+  text-align: bottom;
+}
+
+.footer-links > li >a {
+  color:black;
+  margin-bottom:0px;
+  text-align: center;
+  padding-top: 25%;
+  font-family: oswald;
+  font-color:black;
+  font-size: em;
+  font-weight: bold;
+}
+.nav-pillsContainer {
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.navbar-brand {
+padding-top: 15px;
+  text-align: center;
+  font-family: oswald;
+  font-color:black;
+  font-size: 1em;
+  font-weight: bold;
+  float: center;
+}
+
+} /*660px*/
+
+@media(min-width: 800px) {
+
+.footer {
+  margin-top: 400px;
   background-color: rgba(147,147,147,.8);
   margin-left: -45px;
   margin-right: -45px;
@@ -387,7 +429,7 @@ margin-top: 400px;
   margin: 0;
 }
 
-.navbar-brand > p {
+.navbar-brand {
 padding-top: 15px;
   text-align: center;
   font-family: oswald;
@@ -411,16 +453,17 @@ padding-top: 15px;
 }
 
 .footer-links > li {
-margin-right: px;
+margin-right: 10px;
 
 }
 
 .nav-pills {
-margin-top:-200px;
+  margin-top: -307px;
 }
 
 .nav-pills >li>a{
-height:100px;
-  width: 150px;
+height:80px;
+  width: 100px;
   background-color: rgba(147,147,147, 1)
+}
 }
