@@ -13,12 +13,13 @@ $.get("/recentTracks", function(data){
   var lastArtist = dataSet[0].artist["#text"];
   var lastalbum = dataSet[0].album["#text"];
   var lastImg = dataSet[0].image[3]["#text"];
-  var lastDate = dataSet[0].date["#text"];
   var lastTrack = dataSet[0].name;
   var nowListening = "";
   var images = "";
 
-  if (dataSet[0]["@attr"] === undefined) { nowListening += `
+  if (dataSet[0]["@attr"] === undefined) { 
+    var lastDate = dataSet[0].date["#text"];
+    nowListening += `
                     <h1 class = 'nowListeningText' style = 'color: rgba(0,0,0, 1);font-size: 21px; font-weight: bold'>
                     What i've been listening to<i class = "fa fa-music"></i>
                     </h1>
@@ -45,7 +46,7 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <h1 class = 'nowListening Text' style = 'color: white; font-size: 18; margin-top: -15px'>
                       ${lastArtist}
               </h1>
-              <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'current/last artist picture'></img>
+              <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'Picture not available :('></img>
               <p class = 'resultText' style = 'color: white; font-size: 14px' id = 'resultText'>
                 ${lastalbum}
               </p>
