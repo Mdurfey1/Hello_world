@@ -37,6 +37,15 @@ request(recentTracks, function (error, response, body) {
   })
 })
 
+app.get('/recentAlbums', function(req, res){ 
+var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=almostcrimes_&period=1month&api_key=cee8eebeb4ff28b14cceee8e805b31b3&format=json"
+  request(recentAlbums, function(error, response, body) {
+    console.log('error:', error);
+    console.log('statusCode:', response && response.statusCode);
+    res.send(response.body);
+  })
+})
+
 app.listen(port, function () {
 
   console.log('Example app listening on port 3000!');

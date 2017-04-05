@@ -13,10 +13,25 @@ $.get("/recentTracks", function(data){
   var lastArtist = dataSet[0].artist["#text"];
   var lastalbum = dataSet[0].album["#text"];
   var lastImg = dataSet[0].image[3]["#text"];
+  var lastDate = dataSet[0].date["#text"];
   var lastTrack = dataSet[0].name;
   var nowListening = "";
+  var images = "";
 
-if (dataSet[0]["@attr"].nowplaying === "true") {
+  if (dataSet[0]["@attr"] === undefined) { nowListening += `
+                    <h1 class = 'nowListeningText' style = 'color: rgba(0,0,0, 1);font-size: 21px; font-weight: bold'>
+                    What i've been listening to<i class = "fa fa-music"></i>
+                    </h1>
+                    <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${lastDate}</span> </h3>
+                    <h1 class ='notListeningText' style = 'color: white; font-size: 15px; margin-top: -7px;'>
+                      <span style = "color: black">Last Track: </span><br>${lastTrack}<br>
+                      ${lastArtist}
+                    </h1> 
+                    <img class ="lastAlbum" id = "lastAlbum" src = "${lastImg}" style = "margin-bottom: 15px"></img>                  
+                  `
+}
+
+else if (dataSet[0]["@attr"].nowplaying === "true") {
   nowListening += `
               <h1 class = 'nowListeningText' style = 'color: rgba(0,0,0, 1); font-size: 24px; font-weight: bold'>
                 Now Listening<i class = "fa fa-music"></i>
@@ -36,24 +51,28 @@ if (dataSet[0]["@attr"].nowplaying === "true") {
               </p>
             `
 }
-else { nowListening += `
-                    <h1 class ='notListeningText' style = 'color: white; font-size: 15px'>
-                    Last Track: ${lastTrack}<br>
-                    </h1>                    
-                  `
-}
 
 $("#recent-tracks").html(`${nowListening}`);
 
-dataSet.forEach(function (value, index){
+
+$.get('/recentAlbums', function(data){
+data = JSON.parse(data);
+console.log(data);
+var images = "";
+for (var i = 0; i <= 9; i++){ 
+
+images += `
+
+<img class = "albumImages" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
+
+`
+}
 
 
+$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText">My top albums this past Month:</h1>${images}`)
 
 
 })
-
-
-
 
 
 })
