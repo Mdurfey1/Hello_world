@@ -20,7 +20,7 @@ $.get("/recentTracks", function(data){
   if (dataSet[0]["@attr"] === undefined) { 
     var lastDate = dataSet[0].date["#text"];
     nowListening += `
-                    <h1 class = 'nowListeningText' style = 'color: rgba(0,0,0, 1);font-size: 21px; font-weight: bold'>
+                    <h1 class = 'nowListeningText' style = 'color: grey;font-size: 21px; font-weight: bold'>
                     What i've been listening to<i class = "fa fa-music"></i>
                     </h1>
                     <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${lastDate}</span> </h3>
@@ -70,7 +70,7 @@ images += `
 }
 
 
-$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText">My top albums this past Month:</h1>${images}`)
+$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: rgba(100,100,100, 1); font-family: raleyway-thin; font-weight: thin;">Top albums</h1>${images}`)
 
 
 })

@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @media (max-width: 800px) {
   .h1 {
@@ -39,7 +40,8 @@ font-weight: bold;
 }
   
   .h1 {
-font-family: "oswald";
+font-family: "raleway";
+font-weight: thin;
 color: rgba(0,0,0, 1);
 text-shadow: 5px 3px 6px rgba(147,147,147, 1);
     font-size: 38px!important
@@ -94,14 +96,10 @@ margin-right: 0px;
     .collapse.in{
         display:block !important;
     }
-}
+} /*------------------max width 800px-------------------*/
 
 .navbar-static-top {
 margin-bottom: -70px;
-}
-
-.navbar-static-bottom >li > a {
-display: block;
 }
 
 div.about-container {
@@ -369,43 +367,52 @@ font-color: white;
 /* Footer */
 @media(max-width: 800px) {
 .footer {
-  background-color: rgba(147,147,147,.8);
-  margin-right: 0px;
-  width: 637px;
-  display: block;
-}
-}
-@media(max-width: 660px) {
-.footer {
   position: relative;
-  width: 65%;
-  background-color: rgba(147,147,147,.8);
+  width: 100%;
   display: block;
-  left: 29%;
+  left: 10.5%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.footer-links {
+  width: 100%;
+}
+
+.fa-fw {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.footer > p {
+  margin: 0px;
 }
 .nav-pills >li>a{
-  background-color: rgba(147,147,147, 1);
-  height: 100%;
-  width: 80%;
+  }
+
+  .nav-pills>li {
+    /*margin-left: 0px!important;*/
+  }
+
+  .footer-links >li {
+    width:23%;
+    text-align: center;
   }
 
 .footer-links > li >a {
-  color:black;
   margin-bottom:0px;
   text-align: center;
-  /*padding-top: 25%;*/
-  font-family: oswald;
-  font-color:black;
   font-size: 1em;
-  font-weight: bold;
+  /*padding-left: 0px!important;*/
 }
+
+
 .nav-pillsContainer {
   margin-top: 0px;
-  display: inline-block;
 }
 
 .navbar-brand {
-padding-top: 15px;
+  padding-top: 15px;
   text-align: center;
   font-family: oswald;
   font-color:black;
@@ -414,13 +421,81 @@ padding-top: 15px;
   float: center;
 }
 
+
+.nav-pills {
+  float:center!important;
+  margin-left: 3%;
+}
+}
+@media(max-width: 660px) {
+.footer {
+  position: relative;
+  width: 100%;
+  display: block;
+  left: 10.5%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.footer-links {
+  width: 100%;
+}
+
+.fa-fw {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.footer > p {
+  margin: 0px;
+}
+.nav-pills >li>a{
+  }
+
+  .nav-pills>li {
+    /*margin-left: 0px!important;*/
+  }
+
+  .footer-links >li {
+    width:23%;
+    text-align: center;
+  }
+
+.footer-links > li >a {
+  margin-bottom:0px;
+  text-align: center;
+  font-size: 1em;
+  /*padding-left: 0px!important;*/
+}
+
+
+.nav-pillsContainer {
+  margin-top: 0px;
+}
+
+.navbar-brand {
+  padding-top: 15px;
+  text-align: center;
+  font-family: oswald;
+  font-color:black;
+  font-size: 1em;
+  font-weight: bold;
+  float: center;
+}
+
+
+.nav-pills {
+  float:center!important;
+  margin-left: 3%;
+}
+
+
 } /*660px*/
 
 @media(min-width: 800px) {
 
 .footer {
   margin-top: 400px;
-  background-color: rgba(147,147,147,.8);
   margin-left: -45px;
   margin-right: -45px;
   
@@ -430,7 +505,7 @@ padding-top: 15px;
   margin: 0;
 }
 
-.navbar-brand {
+.footer > .navbar-brand {
 padding-top: 15px;
   text-align: center;
   font-family: oswald;
@@ -447,7 +522,7 @@ padding-top: 15px;
   margin-bottom:0px;
   text-align: center;
   padding-top: 25%;
-  font-family: oswald;
+  font-family: 'oswald';
   font-color:black;
   font-size: 1.5em;
   font-weight: bold;
@@ -455,11 +530,18 @@ padding-top: 15px;
 
 .footer-links > li {
 margin-right: 10px;
-
+}
+.footer-links ul > li:nth-child(1) {
+  margin-left: 2%;
 }
 
 .nav-pills {
   margin-top: -307px;
+}
+
+.nav-pills {
+  float:center!important;
+  margin-left: 3%;
 }
 
 .nav-pills >li>a{
