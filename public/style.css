@@ -377,29 +377,30 @@ font-color: white;
 }
 @media(max-width: 660px) {
 .footer {
-  width: 279px;
+  position: relative;
+  width: 65%;
   background-color: rgba(147,147,147,.8);
   display: block;
+  left: 29%;
 }
 .nav-pills >li>a{
   background-color: rgba(147,147,147, 1);
-  height: 55px;
-  width: 66px;
-  text-align: bottom;
-}
+  height: 100%;
+  width: 80%;
+  }
 
 .footer-links > li >a {
   color:black;
   margin-bottom:0px;
   text-align: center;
-  padding-top: 25%;
+  /*padding-top: 25%;*/
   font-family: oswald;
   font-color:black;
-  font-size: em;
+  font-size: 1em;
   font-weight: bold;
 }
 .nav-pillsContainer {
-  margin-top: 7px;
+  margin-top: 0px;
   display: inline-block;
 }
 
