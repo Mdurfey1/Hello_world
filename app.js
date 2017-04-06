@@ -1,5 +1,4 @@
 var express = require('express');
-var Parallax = require('parallax-scroll');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
