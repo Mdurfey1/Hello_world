@@ -1,13 +1,5 @@
 $(document).ready(function (){
 
-var Parallax = require('parallax-scroll');
-
-const parallax = new Parallax('.back2', {
-  speed: 0.2, // Anything over 0.5 looks silly
-});
-
-parallax.animate();
-
 $.get("/lastFM", function(d){ 
   d = JSON.parse(d);
   console.log(d);
