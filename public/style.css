@@ -36,14 +36,7 @@ font-weight: bold;
     margin-left: 10%;
     margin-right: 10%;
 }
-  
-  .h1 {
-font-family: "raleway";
-font-weight: thin;
-color: rgba(0,0,0, 1);
-text-shadow: 5px 3px 6px rgba(147,147,147, 1);
-font-size: 38px!important
-}
+
 
   .headshot {
 max-width: 20%!important;
@@ -102,7 +95,7 @@ margin-bottom: -70px;
 }
 
 div.about-container {
-background-image: url("http://i68.tinypic.com/33athj7.jpg");
+/*background-image: url("http://i68.tinypic.com/33athj7.jpg");*/
 padding-top: 10%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -111,18 +104,21 @@ height: 100%;
 }
 
 .h2 {
-font-family: "Roboto";
+font-family: 'Raleway'!important;
   color: rgba(0,0,0, 1);
   text-shadow: 2px 2px 4px rgba(147,147,147, 1);
 font-size: 35px;
 }
 
-.h1 {
-font-family: "Roboto";
-color: rgba(0,0,0, 1);
-/*text-shadow: 5px 3px 6px rgba(147,147,147, 1);*/
-text-shadow: 0px 0px 7px rgba(244, 244, 244, 1)
+.mainTitle {
+font-family: 'Raleway'!important;
+color: #1F1C31!important;
+font-weight: 100;
+font-variant: small-caps;
+-webkit-background-clip: text;
+text-shadow: 2px 2px 3px  #ffffff;
 }
+
 
 .border {
 border-style: ridge;
@@ -197,11 +193,10 @@ border-color: black;
 }
 
 .WebDev {
-font-family: "Roboto";
-  font-size: 40px;
+font-family: 'Raleway'!important;
+  font-size: 30px;
 margin-top: 40px;
 color: rgba(0,0,0, 1);
-font-weight:;
 height: 200px;
 text-shadow: 0px 0px 7px rgba(244, 244, 244, 1)
 }
@@ -246,10 +241,13 @@ margin-bottom: 3%;
 }
 
 .figure-caption {
-  color: rgba(211,211,211, 1);
-  font-size: 20px;
-  text-shadow: 2px 2px 4px rgba(80, 80, 80, 1);
-  
+  color: rgba(0,0,0, 1);
+  font-size: 30px;
+/*  font-stretch: 5px;*/
+  font-family: 'Oswald';
+  font-weight: bold;
+  background-color: rgba(147, 147, 147, .7);
+  position: relative;
 }
 
 #wikiView {
@@ -257,7 +255,7 @@ margin-bottom: 3%;
 }
 
 .h5 {
-font-family: raleway; 
+font-family: 'Raleway'; 
   font-size: 50px; 
   color: black;
   font-weight: bold;

@@ -1,5 +1,21 @@
 $(document).ready(function (){
 
+import Constellation from 'constellation-canvas';
+
+const ellation = new Constellation({
+    size:[500,800],
+    canvas: document.getElementById('canvas'),
+    starCount: 30,
+    lineCount: 60,
+    style: {
+        starSize: 4,
+        starPadding: 5
+        lineSize: 2
+    }
+    console.log("yep")
+
+});
+
 $.get("/lastFM", function(d){ 
   d = JSON.parse(d);
   console.log(d);
