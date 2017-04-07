@@ -4,8 +4,8 @@
 
 @media (max-width: 800px) {
   .h1 {
-    padding-top: 5%;}
-  
+    padding-top: 5%;
+  }
   
   .center-block {
     margin-left:auto;
@@ -14,43 +14,43 @@
   }
   
   .btn-info{
-float:right!important;
-}
+  float:right!important;
+  }
   
   .comments {
-font-size: 20px!important;
-}
+  font-size: 20px!important;
+  }
   
   .buttons > a {
   display: block;
     margin-left: 30%;
     margin-right: 30%;
-}
+  }
   
   .h2 {
-font-family: times;
+  font-family: times;
   color: rgba(0,0,0, 1);
   text-shadow: 2px 2px 4px rgba(147,147,147, 1);
-font-size: 25px!important;
-font-weight: bold;
+  font-size: 25px!important;
+  font-weight: bold;
     margin-left: 10%;
     margin-right: 10%;
-}
+  }
 
 
   .headshot {
-max-width: 20%!important;
-}
+  max-width: 20%!important;
+  }
   
   .WebDev {
-font-family: raleway;
+  font-family: raleway;
   font-size: 18px!important;
-margin-top: 40px;
-color: rgba(255,255,255, 1)!important;
-font-weight:;
-height: 200px;
-text-shadow: 2px 3px 5px rgba(147, 147, 147, 1)
-}
+  margin-top: 40px;
+  color: rgba(255,255,255, 1)!important;
+  font-weight:;
+  height: 200px;
+  text-shadow: 2px 3px 5px rgba(147, 147, 147, 1)
+  }
   
   .navbar-header {
         float: none;
@@ -95,7 +95,7 @@ margin-bottom: -70px;
 }
 
 div.about-container {
-/*background-image: url("http://i68.tinypic.com/33athj7.jpg");*/
+background-image: url("http://i68.tinypic.com/33athj7.jpg");
 padding-top: 10%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -318,6 +318,10 @@ font-weight: bold;
   text-align: center;
 }
 
+.topAlbumText {
+  size: 20%;
+}
+
 @media(min-width:1200px;) {
   .keepInTouchText {
 margin-top: 15%!important;
@@ -341,6 +345,14 @@ margin-top: 15%!important;
 
 /*Listening Habbits*/
 
+#lastImg:hover {
+  cursor: pointer;
+  
+}
+
+#lastAlbum {
+  width: 50%;
+}
 
 .listening-habbits {
 font-family: Roboto;
@@ -349,11 +361,6 @@ font-color: white;
 }
 
 #albumImages{
-  padding: 8px;
-  border-style: solid;
-  border-width: 1px;
-  border-spacing: 3px;
-  border-color: white;
   width: 19%;
 }
 
@@ -375,7 +382,7 @@ font-color: white;
   width: 100%;
 }
 
-.fa-fw {
+#footer-icons {
   width: 100%;
   text-align: center;
   font-size: 2em;
@@ -384,12 +391,7 @@ font-color: white;
 .footer > p {
   margin: 0px;
 }
-.nav-pills >li>a{
-  }
 
-  .nav-pills>li {
-    /*margin-left: 0px!important;*/
-  }
 
   .footer-links >li {
     width:23%;
@@ -400,6 +402,9 @@ font-color: white;
   margin-bottom:0px;
   text-align: center;
   font-size: 1em;
+  border-color: #337AB7;
+  border-width: 1px;
+  border-style: ridge;
   /*padding-left: 0px!important;*/
 }
 
@@ -437,7 +442,7 @@ font-color: white;
   width: 100%;
 }
 
-.fa-fw {
+#footer-icons {
   width: 100%;
   text-align: center;
   font-size: 2em;

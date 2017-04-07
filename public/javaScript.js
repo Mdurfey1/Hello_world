@@ -1,21 +1,5 @@
 $(document).ready(function (){
 
-import Constellation from 'constellation-canvas';
-
-const ellation = new Constellation({
-    size:[500,800],
-    canvas: document.getElementById('canvas'),
-    starCount: 30,
-    lineCount: 60,
-    style: {
-        starSize: 4,
-        starPadding: 5
-        lineSize: 2
-    }
-    console.log("yep")
-
-});
-
 $.get("/lastFM", function(d){ 
   d = JSON.parse(d);
   console.log(d);
@@ -34,11 +18,26 @@ $.get("/recentTracks", function(data){
 
   if (dataSet[0]["@attr"] === undefined) { 
     var lastDate = dataSet[0].date["#text"];
+    console.log(lastDate);
+    var dateParsed = Date.parse(lastDate);
+    var dateParsedAugmented = dateParsed+25200
+    var newDate = new Date(dateParsedAugmented);
+    console.log(newDate);
+    var options = { 
+        localeMatcher: 'best fit',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+        weekday: 'short',
+        month: 'short',
+        day: '2-digit'
+    };
+   var timeString = newDate.toLocaleString('en-US', options);
     nowListening += `
-                    <h1 class = 'nowListeningText' style = 'color: grey;font-size: 21px; font-weight: bold'>
+                    <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music"></i>
                     </h1>
-                    <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${lastDate}</span> </h3>
+                    <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${timeString}</span> </h3>
                     <h1 class ='notListeningText' style = 'color: white; font-size: 15px; margin-top: -7px;'>
                       <span style = "color: black">Last Track: </span><br>${lastTrack}<br>
                       ${lastArtist}
@@ -49,16 +48,16 @@ $.get("/recentTracks", function(data){
 
 else if (dataSet[0]["@attr"].nowplaying === "true") {
   nowListening += `
-              <h1 class = 'nowListeningText' style = 'color: rgba(0,0,0, 1); font-size: 24px; font-weight: bold'>
-                Now Listening<i class = "fa fa-music"></i>
+              <h1 class = 'nowListeningText' style = 'font-size: 24px; font-weight: bold; color: white; text-shadow: 2px 2px 3px #000'>
+                Now Listening<i class = "fa fa-music text-primary"></i>
               </h1>
-              <p class = 'trackText' style = 'color: white; font-size: 14px'>
+              <p class = 'trackText' style = 'color: white; font-size: 18px; font-family: Raleway;'>
                 ${lastTrack}
               </p>
-              <p class = 'trackText' style = 'color: black; margin-top: -10px'>
+              <p class = 'trackText' style = 'margin-top: -10px; color: white'>
                 by
               </p>
-              <h1 class = 'nowListening Text' style = 'color: white; font-size: 18; margin-top: -15px'>
+              <h1 class = 'nowListening Text' style = 'color: white; font-size: 18; margin-top: -15px; font-family: Raleway;'>
                       ${lastArtist}
               </h1>
               <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'Picture not available :('></img>
@@ -85,7 +84,7 @@ images += `
 }
 
 
-$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: rgba(100,100,100, 1); font-family: raleyway-thin; font-weight: thin;">Top albums</h1>${images}`)
+$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "font-family: 'Raleway'; color: white;">Top albums this month:</h1>${images}`)
 
 
 })
