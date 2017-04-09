@@ -19,9 +19,8 @@ $.get("/recentTracks", function(data){
   if (dataSet[0]["@attr"] === undefined) { 
     var lastDate = dataSet[0].date["#text"];
     console.log(lastDate);
-    var dateParsed = Date.parse(lastDate);
-    var dateParsedAugmented = dateParsed+25200
-    var newDate = new Date(dateParsedAugmented);
+    var dateParsed = Date.parse(lastDate)+25200;
+    var newDate = new Date(dateParsed);
     console.log(newDate);
     var options = { 
         localeMatcher: 'best fit',
