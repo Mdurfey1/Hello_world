@@ -44,13 +44,16 @@
   }
   
   .WebDev {
-  font-family: raleway;
   font-size: 18px!important;
   margin-top: 40px;
-  color: rgba(0,0,0, 1)!important;
   font-weight: 900;
   height: 200px;
-  text-shadow: 2px 3px 5px rgba(147, 147, 147, 1)
+  font-family: 'Raleway'!important;
+  color: #1F1C31!important;
+  font-weight: 900;
+  font-variant: small-caps;
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 3px  #ffffff;
   }
   
   .navbar-header {
@@ -110,14 +113,6 @@ height: 100%;
     width: 146px;
   }
 
-
-.h2 {
-font-family: 'Raleway'!important;
-  color: rgba(0,0,0, 1);
-  text-shadow: 2px 2px 4px rgba(147,147,147, 1);
-font-size: 35px;
-}
-
 .mainTitle {
 font-family: 'Raleway'!important;
 color: #1F1C31!important;
@@ -137,9 +132,6 @@ opacity: 0.6;
   margin-right: 40%;
 }
 
-.col1 {
- 
-}
 
 .name {
 transition: 0.8s ease;
@@ -200,14 +192,18 @@ border-color: black;
 
 }
 
-.WebDev {
-font-family: 'Raleway'!important;
-  font-size: 30px;
-margin-top: 40px;
-color: rgba(0,0,0, 1);
-height: 200px;
-text-shadow: 0px 0px 7px rgba(244, 244, 244, 1)
-}
+ .WebDev {
+  font-size: 30px!important;
+  margin-top: 40px;
+  font-weight: 100;
+  height: 200px;
+  font-family: 'Oswald'!important;
+  color: #1F1C31!important;
+  font-weight: 100;
+  font-variant: small-caps;
+  -webkit-background-clip: text;
+  text-shadow: 2px 2px 3px #E0A871;
+  }
 
 /*Portfolio CSS Start~~~~~~~~*/
 
@@ -222,11 +218,7 @@ background-repeat: no-repeat;
 .wellDiv {
   background-color: rgba(211, 211, 211, .9);
   border-style: none;
-  margin-right: 2%;
-  margin-left: 2%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding: 5%;
+  
 }
 
 .figure {
@@ -295,10 +287,12 @@ background-repeat: no-repeat;
   background: transparent;
   transform: rotate( 360deg) skew(300deg, 100deg);
   transition: 600ms;
+   width: 100%;
+  position: absolute;
 }
 
 .figure:hover .face {
-  opacity: 1;
+  opacity: 0.7;
   transition-delay: 0s;
   cursor: pointer;
 }
