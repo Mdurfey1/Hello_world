@@ -208,30 +208,31 @@ border-color: black;
 /*Portfolio CSS Start~~~~~~~~*/
 
 .back2 {
-background: url("http://i67.tinypic.com/65rjme.jpg");
+background: url("http://i66.tinypic.com/2h7pcup.jpg");
 background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+ background-size: cover;
+ background-position:center;
   width: 100%;
 }
 
 .wellDiv {
   background-color: rgba(211, 211, 211, .9);
   border-style: none;
-  
 }
 
 .figure {
-/*  width: 450px;
-  height: 350px;*/
-  margin: 10px;
-  /*position: absolute;*/
-  border: 2px solid #000;
   overflow: hidden;
   position: relative;
-  text-align: center;
   padding-left: 0px!important;
   padding-right: 0px!important;
+  top:0;
+  left:0;
+}
+
+.portRow {
+  
+  padding: 2% 8% 9% 8%;
+
 }
 
 .figure .face {
@@ -241,10 +242,6 @@ background-repeat: no-repeat;
   overflow: hidden;
   top: 0;
   left: 0;
-}
-
-.figure:hover {
-  
 }
 
 .figure h2 {
@@ -259,17 +256,10 @@ background-repeat: no-repeat;
   size: ;
 }
 
-.figure img {
-  display: block;
-  position: relative;
-}
 
 .figure img {
   display: block;
   text-align: center;
- margin: 0 auto;
- /* width: 450px;
-  height: 350px;*/
 }
 
 .figure img {
@@ -283,7 +273,6 @@ background-repeat: no-repeat;
 }
 
 .figure h2 {
-  /*opacity: .4;*/
   background: transparent;
   transform: rotate( 360deg) skew(300deg, 100deg);
   transition: 600ms;
@@ -560,58 +549,63 @@ margin-top:30px;
 @media(min-width: 800px) {
 
 .footer {
-  margin-top: 400px;
-  margin-left: -45px;
-  margin-right: -45px;
-  
+  position: relative;
+  width: 100%;
+  display: block;
+  left: 10.5%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.footer-links {
+  width: 100%;
 }
 
-.footer-text {
-  margin: 0;
+#footer-icons {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
 }
 
-.footer > .navbar-brand {
-padding-top: 15px;
+.footer > p {
+  margin: 0px;
+}
+.nav-pills >li>a{
+  }
+
+  .nav-pills>li {
+    /*margin-left: 0px!important;*/
+  }
+
+  .footer-links >li {
+    width:23%;
+    text-align: center;
+  }
+
+.footer-links > li >a {
+  margin-bottom:0px;
+  text-align: center;
+  font-size: 1em;
+  /*padding-left: 0px!important;*/
+}
+
+
+.nav-pillsContainer {
+  margin-top: 0px;
+}
+
+.navbar-brand {
+  padding-top: 15px;
   text-align: center;
   font-family: oswald;
   font-color:black;
   font-size: 1em;
   font-weight: bold;
+  float: center;
 }
 
-
-
-
-.footer-links > li >a {
-  color:black;
-  margin-bottom:0px;
-  text-align: center;
-  padding-top: 25%;
-  font-family: 'oswald';
-  font-color:black;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.footer-links > li {
-  margin-right: 10px;
-}
-.footer-links ul > li:nth-child(1) {
-  margin-left: 2%;
-}
-
-.nav-pills {
-  margin-top: -307px;
-}
 
 .nav-pills {
   float:center!important;
   margin-left: 3%;
-}
-
-.nav-pills >li>a{
-height:80px;
-  width: 100px;
-  background-color: rgba(147,147,147, 1)
 }
 }
