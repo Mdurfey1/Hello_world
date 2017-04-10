@@ -33,8 +33,8 @@ $.get("/recentTracks", function(data){
     };
    var timeString = newDate.toLocaleString('en-US', options);
     nowListening += `
-                    <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
-                    What i've been listening to<i class = "fa fa-music"></i>
+                    <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
+                    What i've been listening to<i class = "fa fa-music text-primary"></i>
                     </h1>
                     <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${timeString}</span> </h3>
                     <h1 class ='notListeningText' style = 'color: white; font-size: 15px; margin-top: -7px;'>
@@ -74,20 +74,24 @@ data = JSON.parse(data);
 console.log(data);
 var images = "";
 for (var i = 0; i <= 9; i++){ 
-
+var url = data.topalbums.album[i].url
+var artistName = data.topalbums.album[i].artist.name
+var albumName = data.topalbums.album[i].name
 images += `
+  <div class = "image col-sm-3" id = "image">
+    <img class = "albumImages" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"/>
+      <div class = "imageFace" onclick = "window.open('${url}')">
+        <h2 class = "artistName" style = "margin: 5px; font-size: 150%; color: white">${artistName}</h2><br>
+        <h2 class = "albumName" style = 'padding: 2px; font-size: 100%; font-family: Raleway; color: white'>${albumName}</h2>
+      </div>
+  </div>
+        `
+    }
 
-<img class = "albumImages" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
+$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
+  text-shadow: 2px 2px 3px #000; font-variant: small-caps">Top albums this month:</h1>${images}`)
 
-`
-}
-
-
-$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "font-family: 'Raleway'; color: white;">Top albums this month:</h1>${images}`)
-
-
-})
-
+  })
 
 })
 

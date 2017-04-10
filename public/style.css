@@ -44,16 +44,16 @@
   }
   
   .WebDev {
-  font-size: 18px!important;
+  font-size: 37px!important;
   margin-top: 40px;
-  font-weight: 900;
+  font-weight: 100;
   height: 200px;
-  font-family: 'Raleway'!important;
+  font-family: 'Oswald'!important;
   color: #1F1C31!important;
   font-weight: 900;
   font-variant: small-caps;
   -webkit-background-clip: text;
-  text-shadow: 2px 2px 3px  #ffffff;
+  text-shadow: 2px 2px 3px #E0A871;
   }
   
   .navbar-header {
@@ -193,13 +193,13 @@ border-color: black;
 }
 
  .WebDev {
-  font-size: 30px!important;
+  font-size: 37px!important;
   margin-top: 40px;
   font-weight: 100;
   height: 200px;
   font-family: 'Oswald'!important;
   color: #1F1C31!important;
-  font-weight: 100;
+  font-weight: 900;
   font-variant: small-caps;
   -webkit-background-clip: text;
   text-shadow: 2px 2px 3px #E0A871;
@@ -231,7 +231,7 @@ background-repeat: no-repeat;
 
 .portRow {
   
-  padding: 2% 8% 9% 8%;
+  padding: 2% 15% 10% 15%;
 
 }
 
@@ -332,6 +332,7 @@ background-repeat: no-repeat;
 .contact-container {
   background: url("http://i65.tinypic.com/sdpu1g.jpg");
   background-size: cover;
+  background-position: center;
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -403,10 +404,6 @@ margin-top:30px;
   
 }
 
-#lastAlbum {
-  width: 50%;
-}
-
 .listening-habbits {
   font-family: Roboto;
   font-size: 15px;
@@ -414,8 +411,72 @@ margin-top:30px;
 }
 
 #albumImages{
+  width: 100%;
+}
+
+
+.image h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  position: relative;
+  font-family: 'Raleway';
+  width: 100%;
+  
+}
+
+
+.image .imageFace {
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  transition: 1000ms;
+  }
+
+.image .imageFace {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  padding-top: 15%;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+  top: 0;
+  left: 0;
+}
+
+.images {
+  text-align: center;
+  margin-left: 0%;
+  margin-right: 0!important;
+}
+
+
+.image {
+  position: relative;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
   width: 19%;
 }
+
+.image:hover h2 {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+.image:hover .imageFace { 
+  opacity: 1;
+  transition-delay: 0s;
+  cursor: pointer;
+ }
+
+ .artistName {
+  padding: 0px;
+ }
+
+ .albumName {
+  padding: 0px;
+ }
 
 
 /*ListeningHabbits END*/
@@ -546,6 +607,8 @@ margin-top:30px;
 
 } /*660px*/
 
+
+/*800px*/
 @media(min-width: 800px) {
 
 .footer {
@@ -556,6 +619,11 @@ margin-top:30px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.musicContainer {
+  margin: 2% 2% 10% auto;
+}
+
 .footer-links {
   width: 100%;
 }
