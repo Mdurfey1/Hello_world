@@ -1,8 +1,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+@media (max-width: 550px)
+{
 
-@media (max-width: 800px) {
+.mainTitle {
+  padding-top: 17%!important;
+}
+}
+
+@media (max-width: 767px) {
   .h1 {
     padding-top: 5%;
   }
@@ -42,12 +50,12 @@
 
   .headshot {
     transition: 0.8s ease;
-  max-width: 35%!important;
+  max-width: 23%!important;
   }
   
   .WebDev {
     transition: 0.8s ease;
-  font-size: 37px!important;
+  font-size: 3vmax!important;
   margin-top: 40px;
   font-weight: 100;
   height: 200px;
@@ -116,18 +124,21 @@ height: 100%;
 
 
  #socialButton{
-    width: 146px;
+    width: 15vmax;
+    font-size: 1.6vmax;
   }
 
 .mainTitle {
-  padding-top: 2%;
+  padding-top: 8%;
+  padding-bottom: 2%;
   transition: 0.8s ease;
-font-family: 'Raleway'!important;
-color: #1F1C31!important;
+font-family: 'Arimo'!important;
+color: #18110F!important;
 font-weight: 100;
 font-variant: small-caps;
 -webkit-background-clip: text;
-text-shadow: 2px 2px 3px  #ffffff;
+font-size: 10vw;
+/*text-shadow: 2px 2px 3px  #fff;*/
 }
 
 
@@ -136,8 +147,10 @@ border-style: ridge;
 opacity: 0.6;
   border-width: 1px;
  border-color: black;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 
@@ -201,11 +214,11 @@ border-color: black;
 }
 
  .WebDev {
-  font-size: 37px!important;
+  font-size: 3.5vmax!important;
   margin-top: 40px;
   font-weight: 100;
   height: 200px;
-  font-family: 'Oswald'!important;
+  font-family: 'Arimo'!important;
   color: #1F1C31!important;
   font-weight: 900;
   font-variant: small-caps;
@@ -261,8 +274,8 @@ background-repeat: no-repeat;
   text-align: center;
   font-weight: 400;
   position: relative;
-  font-family: 'Raleway';
-  font-size: 100%;
+  font-family: 'Arimo';
+  font-size: 3vmax;
   padding: 20%;
   width: 100%;
   size: ;
@@ -320,13 +333,15 @@ background-repeat: no-repeat;
 }
 
 #h5 {
-  font-family: 'Raleway'; 
-  font-size: 50px; 
+  font-family: 'Arimo'; 
+  letter-spacing: 5px;
+  font-size: 7vmax;
   color: black;
   font-weight: 100;
   opacity: 1; 
   text-shadow: 2px 2px 4px rgba(147, 147, 147, 1);
   margin-top: 2%;
+   font-variant: small-caps;
 }
 
 .hr2 {
@@ -334,10 +349,9 @@ background-repeat: no-repeat;
   border-color: black;
   margin-left: 30%;
   margin-right: 30%;
-  margin-top: 0;
+  margin-top: 0px;
   padding: 0;
   margin-bottom:0;
-  
 }
 
 /* Contact Section CSS */
@@ -355,10 +369,10 @@ background-repeat: no-repeat;
 }
 
 .form-group>.col-form-label {
-  font-family: raleway;
+  font-family: 'Raleway';
   font-weight: bold;
   font-size: 20px;
-  color:black;
+  color:white;
 }
 
 .form-group {
@@ -396,7 +410,7 @@ margin-top:30px;
 }
 
 .keepInTouchText {
-  background-color: rgba(255,255,255, .7);
+  background-color: rgba(255,255,255, 1);
   border-style:none;
   text-align: justify;
   margin-top: 30px;
