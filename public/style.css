@@ -22,6 +22,7 @@
   }
   
   #socialButton {
+    transition: 0.8s ease;
   display: block;
     margin-left: auto;
     margin-right: auto;
@@ -40,10 +41,12 @@
 
 
   .headshot {
-  max-width: 20%!important;
+    transition: 0.8s ease;
+  max-width: 35%!important;
   }
   
   .WebDev {
+    transition: 0.8s ease;
   font-size: 37px!important;
   margin-top: 40px;
   font-weight: 100;
@@ -65,18 +68,19 @@
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+
     }
   
   .navbar-collapse > li:nth-child(3) {
-margin-right: 0px;
+margin-right: -2px;
 }
     .navbar-static-top {
         top: 0;
         border-width: 0 0 1px;
     }
-    .navbar-collapse.collapse {
+    /*.navbar-collapse.collapse {
         display: none!important;
-    }
+    }*/
     .navbar-nav {
         float: none!important;
         margin-top: 7.5px;
@@ -97,6 +101,8 @@ margin-right: 0px;
 
 .navbar-static-top {
 margin-bottom: -70px;
+position:absolute;
+width: 100%;
 }
 
 div.about-container {
@@ -114,6 +120,8 @@ height: 100%;
   }
 
 .mainTitle {
+  padding-top: 2%;
+  transition: 0.8s ease;
 font-family: 'Raleway'!important;
 color: #1F1C31!important;
 font-weight: 100;
@@ -140,22 +148,22 @@ transition: 0.8s ease;
   margin: 5px 20px;
   padding: 15px;
   font-family: times;
-  
-font-size: 2.7em;
+font-size: 20px;
 font-weight: bold;
+font-family: 'Raleway';
 }
 
 .name:hover {
-border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
+  transition: 0.8s ease;
 color: black;
+transform: scale(1.6);
   text-shadow: 4px 4px 7px rgba(255, 255, 255, 1 );
 }
 
 .color-me {
 color: black;
   border-color: grey;
-font-family: raleway bold;
+font-family: 'Raleway' bold;
   text-transform: uppercase;
 }
 
@@ -225,6 +233,10 @@ background-repeat: no-repeat;
   position: relative;
   padding-left: 0px!important;
   padding-right: 0px!important;
+  padding-top: 20px!important;
+  padding-bottom: 20px!important;
+  padding-left: 20px!important;
+  padding-right: 20px!important;
   top:0;
   left:0;
 }
@@ -314,6 +326,7 @@ background-repeat: no-repeat;
   font-weight: 100;
   opacity: 1; 
   text-shadow: 2px 2px 4px rgba(147, 147, 147, 1);
+  margin-top: 2%;
 }
 
 .hr2 {
@@ -414,6 +427,65 @@ margin-top:30px;
   width: 100%;
 }
 
+.images {
+
+  margin-top: 4%;
+}
+@media (min-width: 200px) {
+  .images {
+  text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .image {
+  position: relative;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  width: 100%;
+  float:left!important;
+  } 
+}
+
+@media (min-width: 450px) and (max-width: 700px){
+  .images {
+/*  margin-left: 17%;*/
+  margin-top: 0%;
+  }
+}
+
+.images {
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+.images {
+  padding-left: 6%;
+  margin-top: 0%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px){
+  .images {
+  padding-left: 6%;
+  margin-top: 0%;
+}
+}
+
+@media (min-width: 1320px) {
+  .images{ 
+    margin-top: 10px;
+    padding-left: 0%;
+  }
+}
+
+@media (min-width: 1680px) {
+  .images{ 
+    margin-top: 0px;
+    padding-left: 0%;
+  }
+}
+
 
 .image h2 {
   text-transform: uppercase;
@@ -421,8 +493,7 @@ margin-top:30px;
   font-weight: 400;
   position: relative;
   font-family: 'Raleway';
-  width: 100%;
-  
+  width: 100%; 
 }
 
 
@@ -444,10 +515,10 @@ margin-top:30px;
   left: 0;
 }
 
-.images {
+.image {
   text-align: center;
-  margin-left: 0%;
-  margin-right: 0!important;
+  /*padding: 2% 1% 2% 1%;*/
+  overflow: hidden;
 }
 
 
@@ -456,6 +527,7 @@ margin-top:30px;
   padding-left: 0px!important;
   padding-right: 0px!important;
   width: 19%;
+  float:left;
 }
 
 .image:hover h2 {
@@ -476,6 +548,16 @@ margin-top:30px;
 
  .albumName {
   padding: 0px;
+ }
+
+ @media(max-width: 768px) {
+.image {
+  position: relative;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  width: 150px;
+}
+
  }
 
 
@@ -526,7 +608,7 @@ margin-top:30px;
   margin-top: 0px;
 }
 
-.navbar-brand {
+.footer .navbar-brand {
   padding-top: 15px;
   text-align: center;
   font-family: oswald;
@@ -588,7 +670,7 @@ margin-top:30px;
   margin-top: 0px;
 }
 
-.navbar-brand {
+.footer .navbar-brand {
   padding-top: 15px;
   text-align: center;
   font-family: oswald;
@@ -620,9 +702,6 @@ margin-top:30px;
   margin-top: 10px;
 }
 
-.musicContainer {
-  margin: 2% 2% 10% auto;
-}
 
 .footer-links {
   width: 100%;
@@ -661,7 +740,7 @@ margin-top:30px;
   margin-top: 0px;
 }
 
-.navbar-brand {
+.footer .navbar-brand {
   padding-top: 15px;
   text-align: center;
   font-family: oswald;

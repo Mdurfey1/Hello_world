@@ -1,5 +1,12 @@
 $(document).ready(function (){
 
+if ($('.navbar-collapse').hasClass('collapse') === true) {
+  $('nav button').on('click', () => { 
+    $('.collapse').toggle();
+    // $('.navbar-collapse').removeClass('.collapse')
+  })
+}
+
 $.get("/lastFM", function(d){ 
   d = JSON.parse(d);
   console.log(d);
@@ -78,8 +85,8 @@ var url = data.topalbums.album[i].url
 var artistName = data.topalbums.album[i].artist.name
 var albumName = data.topalbums.album[i].name
 images += `
-  <div class = "image col-sm-3" id = "image">
-    <img class = "albumImages" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"/>
+  <div class = "image text-center center-block" id = "image">
+    <img class = "albumImages img-responsive" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
       <div class = "imageFace" onclick = "window.open('${url}')">
         <h2 class = "artistName" style = "margin: 5px; font-size: 150%; color: white">${artistName}</h2><br>
         <h2 class = "albumName" style = 'padding: 2px; font-size: 100%; font-family: Raleway; color: white'>${albumName}</h2>
@@ -88,7 +95,7 @@ images += `
         `
     }
 
-$("#images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
+$(".images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
   text-shadow: 2px 2px 3px #000; font-variant: small-caps">Top albums this month:</h1>${images}`)
 
   })
