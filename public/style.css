@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Arimo');
+@font-face {
+    font-family: 'Ailerons';
+    font-style: normal;
+    font-weight: 400;
+    src:  local('Ailerons'),
+          url("../Users/michaeldurfey/Library/Fonts/Ailerons-Typeface.otf") format("embedded-opentype");
+}
+
 @media (max-width: 550px)
 {
 
@@ -132,7 +140,7 @@ height: 100%;
   padding-top: 8%;
   padding-bottom: 2%;
   transition: 0.8s ease;
-font-family: 'Arimo'!important;
+font-family: 'Ailerons'!important;
 color: #18110F!important;
 font-weight: 100;
 font-variant: small-caps;

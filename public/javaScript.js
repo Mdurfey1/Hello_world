@@ -25,20 +25,20 @@ $.get("/recentTracks", function(data){
 
   if (dataSet[0]["@attr"] === undefined) { 
     var lastDate = dataSet[0].date["#text"];
-    console.log(lastDate);
-    var dateParsed = Date.parse(lastDate)+25200;
-    var newDate = new Date(dateParsed);
-    console.log(newDate);
+    console.log("lastDate:" + lastDate);
     var options = { 
-        localeMatcher: 'best fit',
+        // hour12: true,
         hour: 'numeric',
         minute: 'numeric',
-        hour12: true,
-        weekday: 'short',
+        weekday: 'numeric',
         month: 'short',
-        day: '2-digit'
+        day: 'numeric',
+        timeZone: "America/Los_Angeles",
+        timeZoneName: 'short'
     };
-   var timeString = newDate.toLocaleString('en-US', options);
+
+   var timeString = lastDate.toLocaleString(options);
+   console.log("timeString:" + timeString);
     nowListening += `
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music text-primary"></i>
