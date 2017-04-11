@@ -27,7 +27,7 @@ $.get("/recentTracks", function(data){
     var lastDate = dataSet[0].date["#text"];
     console.log("lastDate:" + lastDate);
     var options = { 
-        // hour12: true,
+        hour12: true,
         hour: 'numeric',
         minute: 'numeric',
         weekday: 'numeric',
