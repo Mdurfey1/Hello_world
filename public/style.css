@@ -66,7 +66,7 @@
   font-weight: 900;
   font-variant: small-caps;
   -webkit-background-clip: text;
-  text-shadow: 2px 2px 3px #E0A871;
+  /*text-shadow: 2px 2px 3px #E0A871;*/
   }
   
   .navbar-header {
@@ -140,7 +140,7 @@ height: 100%;
   font-variant: small-caps;
   -webkit-background-clip: text;
   font-size: 12vw;
-/*text-shadow: 2px 2px 3px  #fff;*/
+ text-shadow: 2px 2px 3px #fff;
 }
 
 
@@ -225,7 +225,7 @@ border-color: black;
   font-weight: 900;
   font-variant: small-caps;
   -webkit-background-clip: text;
-  text-shadow: 2px 2px 3px #E0A871;
+  text-shadow: 2px 2px 3px #fff;
   }
 
 /*Portfolio CSS Start~~~~~~~~*/
@@ -371,7 +371,7 @@ background-repeat: no-repeat;
 
 .first-content {
   display: flex;
-  align-items: center| ;
+  align-items: center;
 }
 
 .form-group>.col-form-label {
@@ -421,16 +421,22 @@ margin-top:30px;
 .keepInTouchText {
   background-color: rgba(255,255,255, 1);
   border-style:none;
-  text-align: justify;
   margin-top: 30px;
+  font-family: 'Raleway';
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
   
 }
 
 .comments {
-  font-family: times;
-  font-size: 25px;
+  font-family: "Raleway";
+  font-size: 20px;
   color:black;
-  text-align: justified;
+  text-align: center;
 }
 
 /*Listening Habbits*/
@@ -485,7 +491,7 @@ margin-top:30px;
   align-items: center;
 }
 .first-content {
-  display: block;
+  /*display: block;*/
   flex-direction: column;
   align-items: center;
 }
@@ -754,12 +760,23 @@ width: 100%;
  }
 
  .artistName {
-  padding: 0px;
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 1vmax;
+  color: white;
+  font-weight: bold;
  }
 
  .albumName {
   padding-top: 6%;
+  padding-left: 5%; 
+  padding-right: 5%; 
+  font-size: 1vmax; 
+  font-family: 'Raleway'; 
+  color: white; 
+  width: 100%
  }
+
 
  @media(max-width: 768px) {
 /*.image {
@@ -777,7 +794,7 @@ width: 100%;
 
 /* Footer */
 .footer-links {
-  background-color: rgba(147, 147, 147, 1);
+
 padding-right: -25px!important;
 width: 100%;
  /*margin-left: -25px!important;*/

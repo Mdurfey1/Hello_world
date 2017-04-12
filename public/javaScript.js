@@ -108,8 +108,8 @@ images += `
   <div class = "image text-center" id = "image">
     <img class = "albumImages img-responsive" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
       <div class = "imageFace" onclick = "window.open('${url}')">
-        <h2 class = "artistName" style = "padding-right: 5%; padding-left: 5%; font-size: 100%; color: white; width: 100%; font-weight: bold">${artistName}</h2>
-        <h2 class = "albumName" style = 'padding-left: 5%; padding-right: 5%; font-size: 80%; font-family: Raleway; color: white; width: 100%;'>${albumName}</h2>
+        <h2 class = "artistName">${artistName}</h2>
+        <h2 class = "albumName">${albumName}</h2>
       </div>
   </div>
         `
