@@ -21,7 +21,7 @@ $.get("/recentTracks", function(data){
   var lastImg = dataSet[0].image[3]["#text"];
   var lastTrack = dataSet[0].name;
   var lastURL = dataSet[0].url;
-  var nowListening = "";
+  var listening = "";
   var images = "";
 
   if (dataSet[0]["@attr"] === undefined) { 
@@ -40,7 +40,7 @@ $.get("/recentTracks", function(data){
 
    var timeString = lastDate.toLocaleString(options);
    console.log("timeString:" + timeString);
-    nowListening += `
+    listening += `
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music text-primary"></i>
                     </h1>
@@ -61,7 +61,7 @@ $.get("/recentTracks", function(data){
 }
 
 else if (dataSet[0]["@attr"].nowplaying === "true") {
-  nowListening += `
+  listening += `
               <h1 class = 'nowListeningText' style = 'font-size: 24px; font-weight: bold; color: white; text-shadow: 2px 2px 3px #000'>
                 Now Listening<i class = "fa fa-music text-primary"></i>
               </h1>
@@ -77,17 +77,17 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <p class = 'resultText' style = 'color: white; font-size: 14px' id = 'resultText'>
                 ${lastalbum}
               </p>
-              <div class = "lastAlbumImage text-center" id = "lastAlbumImage">
-                    <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'Picture not available :('></img>
-                    <div class = "lastAlbumImageFace" align="center" onclick = "window.open('${lastURL}')">
-                      <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 160%; color: white; width: 100%; font-weight: bold">${lastArtist}</h2>
-                      <h2 class = "lastAlbumName" style = 'padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 135%; font-family: Raleway; color: white; width: 100%;'>${lastalbum}</h2>
+              <div class = "currentAlbumImage text-center" id = "lastAlbumImage">
+                    <img class = 'currentAlbum' id = 'currentAlbum' src = '${lastImg}' alt = 'Picture not available :('></img>
+                    <div class = "currentAlbumImageFace" align="center" onclick = "window.open('${lastURL}')">
+                      <h2 class = "currentArtistName">${lastArtist}</h2>
+                      <h2 class = "currentAlbumName">${lastalbum}</h2>
                     </div>
               </div>
             `
 }
 
-$("#recent-tracks").html(`${nowListening}`);
+$("#recent-tracks").html(`${listening}`);
 
 
 $.get('/recentAlbums', function(data){
