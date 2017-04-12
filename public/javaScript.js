@@ -98,8 +98,14 @@ for (var i = 0; i <= 9; i++){
 var url = data.topalbums.album[i].url
 var artistName = data.topalbums.album[i].artist.name
 var albumName = data.topalbums.album[i].name
+var topAlbumText = "";
+
+topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
+  text-shadow: 2px 2px 3px #000; font-variant: small-caps">Top albums this month:</h1> 
+          `
 images += `
-  <div class = "image text-center center-block" id = "image">
+
+  <div class = "image text-center" id = "image">
     <img class = "albumImages img-responsive" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
       <div class = "imageFace" onclick = "window.open('${url}')">
         <h2 class = "artistName" style = "padding-right: 5%; padding-left: 5%; font-size: 100%; color: white; width: 100%; font-weight: bold">${artistName}</h2>
@@ -108,9 +114,8 @@ images += `
   </div>
         `
     }
-
-$(".images").html(`<h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
-  text-shadow: 2px 2px 3px #000; font-variant: small-caps">Top albums this month:</h1>${images}`)
+$(".topAlbumText").html(`${topAlbumText}`)
+$(".images").html(`${images}`)
 
   })
 

@@ -23,12 +23,6 @@
     padding-top: 5%;
   }
   
-  .center-block {
-    margin-left:auto;
-   margin-right:auto;
-   display:block;
-  }
-  
   .btn-info{
   float:right!important;
   }
@@ -254,10 +248,6 @@ background-repeat: no-repeat;
   position: relative;
   padding-left: 0px!important;
   padding-right: 0px!important;
-  padding-top: 20px!important;
-  padding-bottom: 20px!important;
-  padding-left: 20px!important;
-  padding-right: 20px!important;
   top:0;
   left:0;
 }
@@ -265,6 +255,9 @@ background-repeat: no-repeat;
 .portRow {
   
   padding: 2% 15% 10% 15%;
+  display: flex;
+  flex-flow: row wrap;
+  /*align-items: flex-start;*/
 
 }
 
@@ -376,6 +369,11 @@ background-repeat: no-repeat;
   margin-top: -10px;
 }
 
+.first-content {
+  display: flex;
+  align-items: center| ;
+}
+
 .form-group>.col-form-label {
   font-family: 'Raleway';
   font-weight: bold;
@@ -408,7 +406,10 @@ margin-top:30px;
 }
 
 .topAlbumText {
-  size: 20%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 3px #000;
 }
 
 @media(min-width:1200px;) {
@@ -439,6 +440,18 @@ margin-top:30px;
   
 }
 
+/*.recentTracksContainer {
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+}*/
+
+.recent-tracks {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+
 .listening-habbits {
   font-family: Roboto;
   font-size: 15px;
@@ -453,27 +466,69 @@ margin-top:30px;
 
   margin-top: 4%;
 }
-@media (min-width: 200px) {
+
+@media (min-width: 200px) and (max-width: 450px) {
   .images {
-  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  /*align-items: center;*/
+  } 
+
+  .image {
+  width: 30%!important;
   }
+
+  .recentTracksContainer {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-content {
+  display: block;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (max-width: 500px) {
-  .image {
-  position: relative;
-  padding-left: 0px!important;
-  padding-right: 0px!important;
-  width: 100%;
-  float:left!important;
-  } 
+.imageContainer { 
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+ }
+
+}
+
+#topAlbumText {
+  text-align: center;
 }
 
 @media (min-width: 450px) and (max-width: 700px){
-  .images {
-/*  margin-left: 17%;*/
-  margin-top: 0%;
-  }
+ 
+
+ .images{ 
+  display: flex;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+  align-self: auto;
+  flex-grow: 1;
+ }
+
+  .first-content {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+  /*.recent-tracks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }*/
+  .recentTracksContainer {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
 
 .images {
@@ -482,45 +537,63 @@ margin-top:30px;
 
 @media (min-width: 700px) {
 .images {
-  padding-left: 6%;
-  margin-top: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1!important;
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1200px){
+@media (max-width: 998px) and (min-width: 700px) {
+  .recentTracksContainer {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+@media (min-width: 998px) and (max-width: 1200px){
   .images {
-  padding-left: 6%;
   margin-top: 0%;
+}
+.recentTracksContainer {
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
 }
 }
 
-@media (min-width: 1320px) {
-  .images{ 
-    margin-top: 10px;
-    padding-left: 0%;
+@media (min-width: 1200px) {
+  .recentTracksContainer {
+    display: flex;
+    align-items: center;
   }
 }
 
+#currentAlbum {
+  width: 100%;
+}
 
 .currentArtistName {
-  padding-right: 5%; 
-  padding-left: 5%; 
   padding-top: 10%; 
-  font-size: 160%; 
+  font-size: 4vmax; 
   color: white; 
   width: 100%; 
-  font-weight: bold
+  font-weight: bold;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+  font-family: 'Raleway';
 }
 
 .currentAlbumName {
-  padding-left: 
-  5%; 
-  padding-right: 5%; 
-  padding-top: 5%; 
   font-size: 135%; 
-  font-family: 'Raleway'; 
+  font-family: 'Oswald'; 
   color: white; 
   width: 100%;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+  font-variant: small-caps;
 }
 .currentAlbumImage:hover .currentAlbumImageFace {
   opacity: 1;
@@ -665,8 +738,7 @@ width: 100%;
   position: relative;
   padding-left: 0px!important;
   padding-right: 0px!important;
-  width: 19%;
-  float:left;
+  width: 24%;
 }
 
 .image:hover h2 {
@@ -690,12 +762,12 @@ width: 100%;
  }
 
  @media(max-width: 768px) {
-.image {
+/*.image {
   position: relative;
   padding-left: 0px!important;
   padding-right: 0px!important;
   width: 150px;
-}
+}*/
 
  }
 
