@@ -20,6 +20,7 @@ $.get("/recentTracks", function(data){
   var lastalbum = dataSet[0].album["#text"];
   var lastImg = dataSet[0].image[3]["#text"];
   var lastTrack = dataSet[0].name;
+  var lastURL = dataSet[0].url;
   var nowListening = "";
   var images = "";
 
@@ -47,8 +48,15 @@ $.get("/recentTracks", function(data){
                     <h1 class ='notListeningText' style = 'color: white; font-size: 15px; margin-top: -7px;'>
                       <span style = "color: black">Last Track: </span><br>${lastTrack}<br>
                       ${lastArtist}
-                    </h1> 
-                    <img class ="lastAlbum" id = "lastAlbum" src = "${lastImg}" style = "margin-bottom: 15px"></img>                  
+                    </h1>                  
+                  <div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
+                    <img class ="lastAlbum" id = "lastAlbum" src = "${lastImg}"></img>                  
+                    <div class = "lastAlbumImageFace" onclick = "window.open('${lastURL}')">
+                      <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 160%; color: white; width: 100%; font-weight: bold">${lastArtist}</h2>
+                      <h2 class = "lastAlbumName" style = 'padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 135%; font-family: Raleway; color: white; width: 100%;'>${lastalbum}</h2>
+                    </div>
+                  </div>
+    
                   `
 }
 
@@ -66,10 +74,16 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <h1 class = 'nowListening Text' style = 'color: white; font-size: 18; margin-top: -15px; font-family: Raleway;'>
                       ${lastArtist}
               </h1>
-              <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'Picture not available :('></img>
               <p class = 'resultText' style = 'color: white; font-size: 14px' id = 'resultText'>
                 ${lastalbum}
               </p>
+              <div class = "lastAlbumImage text-center" id = "lastAlbumImage">
+                    <img class = 'lastImg' id = 'lastImg' src = '${lastImg}' alt = 'Picture not available :('></img>
+                    <div class = "lastAlbumImageFace" align="center" onclick = "window.open('${lastURL}')">
+                      <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 160%; color: white; width: 100%; font-weight: bold">${lastArtist}</h2>
+                      <h2 class = "lastAlbumName" style = 'padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 135%; font-family: Raleway; color: white; width: 100%;'>${lastalbum}</h2>
+                    </div>
+              </div>
             `
 }
 

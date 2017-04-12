@@ -3,6 +3,7 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(../Users/michaeldurfey/Library/Fonts/Ailerons-Typeface.otf))
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
