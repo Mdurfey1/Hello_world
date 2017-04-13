@@ -44,16 +44,16 @@ $.get("/recentTracks", function(data){
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music text-primary"></i>
                     </h1>
-                    <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black"> Updated:</span><br><span style = "rgba(147,147,147, 1)">${timeString}</span> </h3>
-                    <h1 class ='notListeningText' style = 'color: white; font-size: 15px; margin-top: -7px;'>
-                      <span style = "color: black">Last Track: </span><br>${lastTrack}<br>
+                    <h3 class = 'notListeningText' style = 'color: white; font-size: 10px; margin-top: -9px;'><span style = "color: black; text-shadow: 2px 2px 3px #fff; font-family: 'Oswald';"> Updated:</span><br><span style = "rgba(147,147,147, 1);text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-size: 12px;">${timeString}</span> </h3>
+                    <h1 class ='notListeningText' style = "color: white; font-size: 20px; font-weight: bold; margin-top: -7px; text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-variant: small-caps;">
+                      <span style = "color: black; text-shadow: 2px 2px 3px #fff; font-family: 'Oswald'; font-size: 12px">Last Track: </span><br>${lastTrack}<br>
                       ${lastArtist}
                     </h1>                  
                   <div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
                     <img class ="lastAlbum" id = "lastAlbum" src = "${lastImg}"></img>                  
                     <div class = "lastAlbumImageFace" onclick = "window.open('${lastURL}')">
-                      <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 160%; color: white; width: 100%; font-weight: bold">${lastArtist}</h2>
-                      <h2 class = "lastAlbumName" style = 'padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 135%; font-family: Raleway; color: white; width: 100%;'>${lastalbum}</h2>
+                      <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 160%; color: white; width: 100%; font-family: 'Raleway'; font-weight: bold;">${lastArtist}</h2>
+                      <h2 class = "lastAlbumName" style = "padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 135%; font-family: 'Raleway'; color: white; width: 100%; font-weight: bold;">${lastalbum}</h2>
                     </div>
                   </div>
     
@@ -65,16 +65,16 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <h1 class = 'nowListeningText' style = 'font-size: 24px; font-weight: bold; color: white; text-shadow: 2px 2px 3px #000'>
                 Now Listening<i class = "fa fa-music text-primary"></i>
               </h1>
-              <p class = 'trackText' style = 'color: white; font-size: 18px; font-family: Raleway;'>
+              <p class = 'trackText'>
                 ${lastTrack}
               </p>
               <p class = 'trackText' style = 'margin-top: -10px; color: white'>
                 by
               </p>
-              <h1 class = 'nowListening Text' style = 'color: white; font-size: 18; margin-top: -15px; font-family: Raleway;'>
+              <h1 class = 'nowListeningText'>
                       ${lastArtist}
               </h1>
-              <p class = 'resultText' style = 'color: white; font-size: 14px' id = 'resultText'>
+              <p class = 'nowListeningAlbum' id = 'resultText'>
                 ${lastalbum}
               </p>
               <div class = "currentAlbumImage text-center" id = "lastAlbumImage">
@@ -100,8 +100,7 @@ var artistName = data.topalbums.album[i].artist.name
 var albumName = data.topalbums.album[i].name
 var topAlbumText = "";
 
-topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText" style = "color: white;font-size: 30px;font-family: Raleway; 
-  text-shadow: 2px 2px 3px #000; font-variant: small-caps">Top albums this month:</h1> 
+topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
           `
 images += `
 
