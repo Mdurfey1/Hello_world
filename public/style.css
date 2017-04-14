@@ -498,14 +498,20 @@ font-family: 'Oswald';
   .images {
   display: flex;
   flex-flow: wrap;
-  /*align-items: center;*/
+  align-items: center;
+  margin-left: 7%;
   } 
+
+   #lastAlbumImage {
+  width: 80%;
+ }
 
   .keepInTouchText {
     margin-left:0%!important;
     margin-right:0%!important;
-    display: flex;
+    display: block;
     flex-direction: column;
+    align-items: center;
   }
 
   .image {
@@ -533,7 +539,7 @@ font-family: 'Oswald';
 }
 
 
-@media (min-width: 450px) and (max-width: 700px){
+@media (min-width: 450px) and (max-width: 768px){
  
 
  .images{ 
@@ -549,6 +555,10 @@ font-family: 'Oswald';
   flex-direction: column;
   flex-grow:1;
 
+ }
+
+ #lastAlbumImage {
+  width: 70%;
  }
 
  .keepInTouchText {
@@ -827,30 +837,15 @@ width: 100%;
  }
 
 
- @media(max-width: 768px) {
-/*.image {
-  position: relative;
-  padding-left: 0px!important;
-  padding-right: 0px!important;
-  width: 150px;
-}*/
-
- }
-
 
 /*ListeningHabbits END*/
 
 
 /* Footer */
 .footer-links {
-
 padding-right: -25px!important;
 width: 100%;
- /*margin-left: -25px!important;*/
 }
-/*.footer {
-  background-color: rgba(147, 147, 147, 1);
-}*/
 
 @media(max-width: 800px) {
 .footer {
@@ -949,7 +944,7 @@ width: 100%;
   margin-bottom:0px;
   text-align: center;
   font-size: 1em;
-  /*padding-left: 0px!important;*/
+  padding-left: 20%;
 }
 
 
