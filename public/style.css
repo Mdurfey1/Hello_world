@@ -255,6 +255,9 @@ background-repeat: no-repeat;
 .portRow {
   
   padding: 2% 15% 10% 15%;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
   display: flex;
   flex-flow: row wrap;
   /*align-items: flex-start;*/
@@ -279,7 +282,6 @@ background-repeat: no-repeat;
   font-size: 3vmax;
   padding: 20%;
   width: 100%;
-  size: ;
 }
 
 
@@ -428,8 +430,10 @@ margin-top:30px;
   font-family: 'Raleway';
   width: auto;
   height: 100%;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
+  -webkit-flex-direction: column;
   flex-direction: column;
   text-align: center;
   margin-right: 3%;
