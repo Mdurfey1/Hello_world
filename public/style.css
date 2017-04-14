@@ -1,4 +1,6 @@
 
+
+
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Arimo');
@@ -171,7 +173,8 @@ font-family: 'Raleway';
 .name:hover {
   transition: 0.8s ease;
 color: black;
-transform: scale(1.6);
+-ms-transform: scale(1.6);
+    transform: scale(1.6);
   text-shadow: 4px 4px 7px rgba(255, 255, 255, 1 );
 }
 
@@ -256,10 +259,11 @@ background-repeat: no-repeat;
   
   padding: 2% 15% 10% 15%;
   display: -webkit-flex;
-  -webkit-flex-direction: row;
   -webkit-flex-wrap: wrap;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   /*align-items: flex-start;*/
 
 }
@@ -302,7 +306,8 @@ background-repeat: no-repeat;
 
 .figure h2 {
   background: transparent;
-  transform: rotate( 360deg) skew(300deg, 100deg);
+  -ms-transform: rotate( 360deg) skew(300deg, 100deg);
+      transform: rotate( 360deg) skew(300deg, 100deg);
   transition: 600ms;
    width: 100%;
   position: absolute;
@@ -320,7 +325,8 @@ background-repeat: no-repeat;
 
 .figure:hover h2 {
   opacity: 1;
-  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+      transform: scale(1.5);
   transition-delay: 0.1s;
 }
 
@@ -372,8 +378,10 @@ background-repeat: no-repeat;
 }
 
 .first-content {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .form-group>.col-form-label {
@@ -430,11 +438,12 @@ margin-top:30px;
   font-family: 'Raleway';
   width: auto;
   height: 100%;
-  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -webkit-align-items: center;
   text-align: center;
   margin-right: 3%;
@@ -501,9 +510,12 @@ font-family: 'Oswald';
 
 @media (min-width: 200px) and (max-width: 450px) {
   .images {
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: wrap;
-  align-items: center;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-align: center;
+      align-items: center;
   margin-left: 7%;
   } 
 
@@ -514,11 +526,12 @@ font-family: 'Oswald';
   .keepInTouchText {
   margin-left:0%!important;
   margin-right:0%!important;
-  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -webkit-align-items: center;
   }
 
@@ -528,20 +541,28 @@ font-family: 'Oswald';
 
   .recentTracksContainer {
   padding-top: 3%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .first-content {
   /*display: block;*/
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .imageContainer { 
+  display: -ms-flexbox; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
  }
 
 }
@@ -551,17 +572,24 @@ font-family: 'Oswald';
  
 
  .images{ 
+  display: -ms-flexbox; 
   display: flex;
   /*flex-direction: column;*/
-  flex-wrap: wrap;
-  align-self: auto;
-  flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-item-align: auto;
+      align-self: auto;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
  }
 
  .form-horizontal {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-grow:1;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-positive:1;
+      flex-grow:1;
 
  }
 
@@ -569,16 +597,15 @@ font-family: 'Oswald';
   width: 70%;
  }
 
- .keepInTouchText {
-  margin-left: 0%;
-}
-
   .first-content {
   /*display: flex;*/
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   float: none!important;
-  flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
 }
   /*.recent-tracks {
     display: flex;
@@ -587,9 +614,12 @@ font-family: 'Oswald';
   }*/
   .recentTracksContainer {
   padding-top: 3%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 }
 
@@ -599,19 +629,26 @@ font-family: 'Oswald';
 
 @media (min-width: 700px) {
 .images {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-grow: 1!important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-positive: 1!important;
+      flex-grow: 1!important;
   }
 }
 
 @media (max-width: 998px) and (min-width: 700px) {
   .recentTracksContainer {
   padding-top: 3%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 }
 
@@ -621,15 +658,19 @@ font-family: 'Oswald';
 }
 .recentTracksContainer {
   padding-top: 3%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 }
 
 @media (min-width: 1200px) {
   .recentTracksContainer {
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 
@@ -682,7 +723,8 @@ font-family: 'Oswald';
 }
 
 .currentAlbumImage h2 {
-   transform: rotate( 360deg) skew(300deg, 100deg);
+   -ms-transform: rotate( 360deg) skew(300deg, 100deg);
+       transform: rotate( 360deg) skew(300deg, 100deg);
    transition: 600ms;
 }
 
@@ -701,7 +743,8 @@ font-family: 'Oswald';
 
 .currentAlbumImage:hover h2 {
   opacity: 1;
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
   transition-delay: 0.1s;
 }
 
@@ -745,7 +788,8 @@ width: 100%;
 
 .lastAlbumImage:hover h2 {
   opacity: 1;
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
   transition-delay: 0.1s;
 }
 
@@ -775,7 +819,8 @@ width: 100%;
   position: relative;
   width: 100%;
   overflow:hidden; 
-   transform: rotate( 360deg) skew(300deg, 100deg);
+   -ms-transform: rotate( 360deg) skew(300deg, 100deg); 
+       transform: rotate( 360deg) skew(300deg, 100deg);
    transition: 600ms;
 }
 /*both h2 elements below, but can edit them more specifically here*/
@@ -834,7 +879,8 @@ width: 100%;
 
 .image:hover h2 {
   opacity: 1;
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
   transition-delay: 0.1s;
 }
 
@@ -1045,140 +1091,3 @@ width: 100%;
   float:center!important;
 }
 }
-
-/*flex prefix fixes*/
-.display(@value) when (@value = flex) {
-  display: -ms-flexbox; // IE10
-  display: -webkit-flex; // Safari / iOS
-}
-
-.display(@value) when (@value = inline-flex) {
-  display: -ms-inline-flexbox; // IE10
-  display: -webkit-inline-flex; // Safari / iOS
-}
-
-.display(@value) {
-  display: @value;
-}
-
-.flex(@value) {
-  -ms-flex: @value;
-  -webkit-flex: @value;
-  flex: @value;
-}
-
-.flex-justify-content(@justifyContent) {
-  .ms-flex-justify-content(@justifyContent); // IE10
-  -webkit-justify-content: @justifyContent; // Safari / iOS
-  justify-content: @justifyContent;
-}
-
-.flex-align-content(@alignContent) {
-  .ms-flex-align-content(@alignContent); // IE10
-  -webkit-align-content: @alignContent; // Safari / iOS
-  align-content: @alignContent;
-}
-
-.flex-align-items(@alignItems) {
-  .ms-flex-align-items(@alignItems); // IE10
-  -webkit-align-items: @alignItems; // Safari / iOS
-  align-items: @alignItems;
-}
-
-.flex-align-self(@alignSelf) {
-  .ms-flex-align-self(@alignSelf); // IE10
-  -webkit-align-self: @alignSelf; // Safari / iOS
-  align-self: @alignSelf;
-}
-
-.flex-direction(@direction) {
-  -ms-flex-direction: @direction; // IE10
-  -webkit-flex-direction: @direction; // Safari / iOS
-  flex-direction: @direction;
-}
-
-.flex-order(@order) {
-  -ms-flex-order: @order; // IE10
-  -webkit-order: @order; // Safari / iOS
-  order: @order;
-}
-
-.flex-wrap(@wrap) {
-  .ms-flex-wrap(@wrap); // IE10
-  -webkit-flex-wrap: @wrap; // Safari / iOS
-  flex-wrap: @wrap;
-}
-
-/* These are the conditional mixins for the different syntax for IE10 Flexbox */
-.ms-flex-justify-content(@justifyContent) when (@justifyContent = space-between) {
-  -ms-flex-pack: justify;
-}
-
-.ms-flex-justify-content(@justifyContent) when (@justifyContent = space-around) {
-  -ms-flex-pack: distribute;
-}
-
-.ms-flex-justify-content(@justifyContent) when (@justifyContent = flex-start) {
-  -ms-flex-pack: start;
-}
-
-.ms-flex-justify-content(@justifyContent) when (@justifyContent = flex-end) {
-  -ms-flex-pack: end;
-}
-
-.ms-flex-justify-content(@justifyContent) when (@justifyContent = center) {
-  -ms-flex-pack: center;
-}
-
-.ms-flex-align-content(@alignContent) when (@alignContent = space-between) {
-  -ms-flex-line-pack: justify;
-}
-
-.ms-flex-align-content(@alignContent) when (@alignContent = space-around) {
-  -ms-flex-line-pack: distribute;
-}
-
-.ms-flex-align-content(@alignContent) when (@alignContent = flex-start) {
-  -ms-flex-line-pack: start;
-}
-
-.ms-flex-align-content(@alignContent) when (@alignContent = flex-end) {
-  -ms-flex-line-pack: end;
-}
-
-.ms-flex-align-content(@alignContent) when (@alignContent = center), (@alignContent = stretch) {
-  -ms-flex-line-pack: @alignContent;
-}
-
-.ms-flex-align-items(@alignItems) when (@alignItems = flex-start) {
-  -ms-flex-align: start;
-}
-
-.ms-flex-align-items(@alignItems) when (@alignItems = flex-end) {
-  -ms-flex-align: end;
-}
-
-.ms-flex-align-items(@alignItems) when (@alignItems = center), (@alignItems = baseline), (@alignItems = stretch) {
-  -ms-flex-align: @alignItems;
-}
-
-.ms-flex-align-self(@alignSelf) when (@alignSelf = flex-start) {
-  -ms-flex-item-align: start;
-}
-
-.ms-flex-align-self(@alignSelf) when (@alignSelf = flex-end) {
-  -ms-flex-item-align: end;
-}
-
-.ms-flex-align-self(@alignSelf) when (@alignSelf = auto), (@alignSelf = center), (@alignSelf = baseline), (@alignSelf = stretch) {
-  -ms-flex-item-align: @alignSelf;
-}
-
-.ms-flex-wrap(@wrap) when (@wrap = nowrap) {
-  -ms-flex-wrap: none;
-}
-
-.ms-flex-wrap(@wrap) when (@wrap = wrap), (@wrap = wrap-reverse) {
-  -ms-flex-wrap: @wrap;
-}
-/*flex prefix fixes*/
