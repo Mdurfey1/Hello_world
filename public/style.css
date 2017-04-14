@@ -501,10 +501,12 @@ font-family: 'Oswald';
   /*align-items: center;*/
   } 
 
-/*  .keepInTouchText {
+  .keepInTouchText {
     margin-left:0%!important;
     margin-right:0%!important;
-  }*/
+    display: flex;
+    flex-direction: column;
+  }
 
   .image {
   width: 30%!important;
