@@ -25,20 +25,28 @@ $.get("/recentTracks", function(data){
   var images = "";
 
   if (dataSet[0]["@attr"] === undefined) { 
-    var lastDate = dataSet[0].date["#text"];
-    console.log("lastDate:" + lastDate);
+var lastDate = dataSet[0].date["#text"];
+    function parseISOLocal(s) {
+  var b = s.split(" ");
+  var hours = b[3].split(":");
+  console.log(b);
+console.log(hours[1]-7)
+console.log(b[0], b[1], b[2], Number(b[3])-700);
+}
+parseISOLocal(lastDate);
+console.log(lastDate)
     var options = { 
-        hour12: true,
         hour: 'numeric',
         minute: 'numeric',
-        weekday: 'numeric',
+        weekday: 'short',
+        day: 'numeric',
         month: 'short',
         day: 'numeric',
-        timeZone: "America/Los_Angeles",
-        timeZoneName: 'short'
-    };
-
-   var timeString = lastDate.toLocaleString(options);
+        localeMatcher: 'lookup'
+        // timeZone: "lookup",
+        // hour12: true
+    }
+   var timeString = lastDate.toLocaleString('en-US', options)
    console.log("timeString:" + timeString);
     listening += `
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
@@ -68,7 +76,7 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <p class = 'trackText'>
                 ${lastTrack}
               </p>
-              <p class = 'trackText' style = 'margin-top: -10px; color: white'>
+              <p style = 'margin-top: -5px; margin-bottom: 2px; color: white; text-shadow: 2px 2px 3px #000'>
                 by
               </p>
               <h1 class = 'nowListeningText'>
