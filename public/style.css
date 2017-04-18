@@ -25,13 +25,6 @@
     padding-top: 5%;
   }
   
-  /*.btn-info{
-  float:right!important;
-  }*/
-  
-  .comments {
-  font-size: 20px!important;
-  }
   
   #socialButton {
     transition: 0.8s ease;
@@ -129,8 +122,8 @@ height: 100%;
 
 
  #socialButton{
-    width: 15vmax;
-    font-size: 1.6vmax;
+    width: 20vmax;
+    font-size: 2vmax;
   }
 
 .mainTitle {
@@ -213,7 +206,8 @@ border-color: black;
 }
 
 .buttons{
-  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -408,6 +402,7 @@ margin-top:30px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  padding-top: 10px;
 }
 
 .topAlbumText {
@@ -464,6 +459,7 @@ margin-top:30px;
   font-weight: 600;
   color:black;
   text-align: center;
+  padding: 10px;
 }
 
 /*Listening Habbits*/
@@ -513,10 +509,6 @@ font-family: 'Oswald';
   width: 100%;
 }
 
-.images {
-
-  margin-top: 4%;
-}
 
 @media (min-width: 200px) and (max-width: 450px) {
   .images {
@@ -533,12 +525,16 @@ font-family: 'Oswald';
   width: 80%;
  }
 
+ .form-group{ 
+  margin-right: -15%!important;
+  }
+
   .keepInTouchText {
   margin-left:0%!important;
   margin-right:0%!important;
   display: -ms-flexbox;
   display: -webkit-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-direction: column;
@@ -546,6 +542,7 @@ font-family: 'Oswald';
   -webkit-align-items: center;
   position: relative;
   box-shadow: inset 1px 2px 8px;
+  margin-right: 0!important;
   }
 
   .image {
@@ -561,7 +558,7 @@ font-family: 'Oswald';
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-}
+  }
 
   .recent-tracks {
   display: flex;
@@ -609,18 +606,17 @@ font-family: 'Oswald';
   -ms-flex-item-align: auto;
       align-items: center;
   -ms-flex-positive: 1;
-      flex-grow: 1;
 
- }
-
- .image {
-  flex-grow: 1;
  }
 
  .imageContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
+ }
+
+ .form-group {
+  margin-left: 3%!important;
  }
 
  .form-horizontal {
@@ -646,7 +642,6 @@ font-family: 'Oswald';
       justify-content: center;
   float: none!important;
   -ms-flex-positive: 1;
-      flex-grow: 1;
 }
   .recent-tracks {
     display: flex;
@@ -662,6 +657,10 @@ font-family: 'Oswald';
   -ms-flex-align: center;
       align-items: center;
 }
+
+  .keepInTouchText{
+    margin-right: 0!important;
+  }
 }
 
 .images {
@@ -675,9 +674,9 @@ font-family: 'Oswald';
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-align: center;
-      align-items: center;
   -ms-flex-positive: 1!important;
       flex-grow: 1!important;
+      justify-content: center;
   }
 }
 
@@ -869,7 +868,7 @@ width: 100%;
  .artistName {
   padding-right: 5%;
   padding-left: 5%;
-  font-size: 1.5vmax;
+  font-size: 1.7vmax;
   color: white;
   font-weight: bold;
   font-family: 'Raleway';
@@ -908,6 +907,13 @@ width: 100%;
   text-align: center;
   /*padding: 2% 1% 2% 1%;*/
   overflow: hidden;
+}
+
+.rank {
+  color: white;
+  font-family: 'Raleway';
+  font-size: 1vmin;
+  font-variant: small-caps;
 }
 
 
@@ -949,6 +955,9 @@ width: 100%;
 }
 .footer-links {
   width: 100%;
+  border-top: solid;
+  border-top-width: 1px;
+  border-top-color: #337AB7;
 }
 
 #footer-icons {
@@ -1075,6 +1084,7 @@ width: 100%;
 }
 
 .footer-container {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -1086,6 +1096,9 @@ width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  border-top: solid;
+  border-top-width: 1px;
+  border-top-color: #337AB7;
 }
 
 #footer-icons {
