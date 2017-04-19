@@ -3,6 +3,8 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(__dirname + '/mailer.php'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -45,6 +47,9 @@ var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&
     res.send(response.body);
   })
 })
+
+
+// app.post()
 
 app.listen(port, function () {
 
