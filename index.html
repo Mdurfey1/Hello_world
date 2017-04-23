@@ -11,8 +11,7 @@
   <script type = "text/javascript" src = "/jquery/dist/jquery.js"></script>
   <script type="text/javascript" src = "/javaScript.js"></script>
   <script src = "/moment/moment.js"></script> 
-  <script src = "/app.js"></script>
-  <script type="text/javascript" src = "mailServer.js"></script>
+  <!-- <script src = "/app.js"></script> -->
   <link rel="stylesheet" type="text/css" href="/flickity/dist/flickity.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet"  type="text/css" href="/style.css">
@@ -115,8 +114,10 @@
         <hr class = "hr2">
     <div class = "row first-content">
       <div class = "col-lg-5 col-lg-offset-0 col-md-5 col-sm-12 col-xs-12 first-contentContainer">
+
       <div id = "form-messages"></div>
-        <form class ="form-horizontal" method ="post" id ="contact-form" action ="mailto:mdurfey@me.com"> <!--form-->
+
+        <form class ="form-horizontal" method ="post" enctype="multipart/form-data" id ="contact-form" action ="/signup"> <!--form-->
 
           <div class="form-group field">
             <label for="smFormGroupInput" class="col-xs-3 col-sm-2 col-md-2 col-lg-3 col-form-label col-form-label-sm">Name</label>
@@ -151,8 +152,10 @@
             <div class = "col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-0">
             <button type="submit" class = "btn btn-default btn-info btn-lg" id ="submitButton"><i class = "fa fa-paper-plane"></i>Send</button>
             </div>
-          </div>
+          </div> 
+
         </form>  <!--form-->
+
       </div><!--col-lg-5-->
 
     <!-- <div class = "row"> -->

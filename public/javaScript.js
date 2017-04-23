@@ -10,13 +10,11 @@ if ($('.navbar-collapse').hasClass('collapse') === true) {
 
 $.get("/lastFM", function(d){ 
   d = JSON.parse(d);
-  console.log(d);
 })
 
 $.get("/recentTracks", function(data){ 
   data = JSON.parse(data);
   var dataSet = data.recenttracks.track;
-  console.log(dataSet);
   var lastArtist = dataSet[0].artist["#text"];
   var lastalbum = dataSet[0].album["#text"];
   var lastImg = dataSet[0].image[3]["#text"];
@@ -31,7 +29,6 @@ $.get("/recentTracks", function(data){
     var a = moment(Date.parse(lastDate)).subtract(offset, 'minutes');
     var timeString = a.format("ddd, MMM Do YYYY, h:mm a");
 
-   console.log("timeString:" + timeString);
     listening += `
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music text-primary"></i>
@@ -84,7 +81,6 @@ $("#recent-tracks").html(`${listening}`);
 
 $.get('/recentAlbums', function(data){
 data = JSON.parse(data);
-console.log(data);
 var images = "";
 for (var i = 0; i <= 9; i++){ 
 var url = data.topalbums.album[i].url
@@ -92,8 +88,6 @@ var artistName = data.topalbums.album[i].artist.name
 var albumName = data.topalbums.album[i].name
 var rank = data.topalbums.album[i]["@attr"].rank;
 var topAlbumText = "";
-
-console.log(rank);
 
 topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
           `
@@ -116,13 +110,20 @@ $(".images").html(`${images}`)
 
 })
 
+var email,name,phone,message;
+$("#submitButton").click( () => {
+  email=$("#email").val();
+  name=$("#name").val();
+  phone=$("#phone").val();
+  message=$("#message").val();
 
+  $.post('/signup', {email: email, name: name, phone: phone, message: message}, (b) => { 
 
+    console.log(b);
 
+  });
 
-
-
-
+});
 
 
 

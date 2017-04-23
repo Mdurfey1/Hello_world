@@ -12,6 +12,13 @@
           url("../Users/michaeldurfey/Library/Fonts/Ailerons-Typeface.otf") format("embedded-opentype");
 }
 
+@media (max-width: 450px) {
+  #socialButton{
+    width: 17vmax!important;
+    font-size: 1.7vmax!important;
+  }
+}
+
 @media (max-width: 550px)
 {
 
@@ -47,7 +54,7 @@
 
   .headshot {
     transition: 0.8s ease;
-  max-width: 25vmax!important;
+  max-width: 15vmax!important;
   }
   
   .WebDev {
@@ -122,8 +129,8 @@ height: 100%;
 
 
  #socialButton{
-    width: 20vmax;
-    font-size: 2vmax;
+    width: 10vmax;
+    font-size: 1vmax;
   }
 
 .mainTitle {
@@ -135,7 +142,7 @@ height: 100%;
   font-weight: 100;
   font-variant: small-caps;
   -webkit-background-clip: text;
-  font-size: 12vw;
+  font-size: 9vw;
  text-shadow: 2px 2px 3px #fff;
 }
 
@@ -167,8 +174,8 @@ font-family: 'Raleway';
 .name:hover {
   transition: 0.8s ease;
 color: black;
--ms-transform: scale(1.6);
-    transform: scale(1.6);
+-ms-transform: scale(1.3);
+    transform: scale(1.3);
   text-shadow: 4px 4px 7px rgba(255, 255, 255, 1 );
 }
 
@@ -630,7 +637,7 @@ font-family: 'Oswald';
  }
 
  #lastAlbumImage {
-  width: 70%;
+  width: 50%;
  }
 
   .first-content {
@@ -955,9 +962,11 @@ width: 100%;
 }
 .footer-links {
   width: 100%;
-  border-top: solid;
-  border-top-width: 1px;
-  border-top-color: #337AB7;
+}
+
+.footerText {
+      text-shadow: 1px 1px 2px black;
+      color: #337AB7;
 }
 
 #footer-icons {
@@ -1014,6 +1023,11 @@ width: 100%;
 }
 .footer-links {
   width: 100%;
+}
+
+.footerText {
+      text-shadow: 1px 1px 2px black;
+      color: #337AB7;
 }
 
 #footer-icons {

@@ -1,9 +1,12 @@
 var express = require('express');
+const nodemailer = require('nodemailer');
+var bodyParser = require('body-parser')
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
-app.use(express.static(__dirname + '/mailer.php'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 app.get('/', function (req, res) {
@@ -15,11 +18,6 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 var request = require('request');
-
-app.get('/form-group', function(req, res){
-  
-  console.log(req)
-});
 
 app.get('/lastFM', function(req, res) {
 var lastFMURL = "https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=almostcrimes_&api_key=cee8eebeb4ff28b14cceee8e805b31b3&period=1month&format=json";
@@ -47,6 +45,45 @@ var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&
     res.send(response.body);
   })
 })
+
+app.post('/signup', function(req, res, next) { 
+
+  console.log(req.body)
+var name = req.body.name;
+var email = req.body.email;
+var phone = req.body.phone;
+var message = req.body.message;
+var success;
+
+
+let transporter = nodemailer.createTransport({ 
+  service: 'gmail',
+  auth: {
+      user: 'mpdurfey@gmail.com',
+      pass: 'mpdfocusrite!'
+  }
+});
+
+  let mailOptions = {
+    from: 'mpdurfey@gmail.com',
+    to: 'mpdurfey@gmail.com',
+    subject: `new contact from ${name}`,
+    replyTo: `${email}`,
+    html: `<h1 style = "font-size: 12px">${name}<br>${email}<br>${phone}<br></h1><b>${message}</b>`
+  };
+
+transporter.sendMail(mailOptions, (error, info) => { 
+  if (error) {
+    return console.log(error);
+  }
+
+res.send(('<p>success</p>'))
+
+  console.log('Message %s sent: %s', info.messageId, info.response, info.accepted)
+})
+
+
+});
 
 
 // app.post()
