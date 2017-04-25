@@ -49,20 +49,20 @@ var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&
 app.post('/signup', function(req, res, next) { 
 
   console.log(req.body)
-var name = req.body.name;
-var email = req.body.email;
-var phone = req.body.phone;
-var message = req.body.message;
-var success;
+  var name = req.body.name;
+  var email = req.body.email;
+  var phone = req.body.phone;
+  var message = req.body.message;
+  var success;
 
 
-let transporter = nodemailer.createTransport({ 
-  service: 'gmail',
-  auth: {
+  let transporter = nodemailer.createTransport({ 
+    service: 'gmail',
+    auth: {
       user: 'mpdurfey@gmail.com',
       pass: 'mpdfocusrite!'
-  }
-});
+    }
+  });
 
   let mailOptions = {
     from: 'mpdurfey@gmail.com',
@@ -72,15 +72,18 @@ let transporter = nodemailer.createTransport({
     html: `<h1 style = "font-size: 12px">${name}<br>${email}<br>${phone}<br></h1><b>${message}</b>`
   };
 
-transporter.sendMail(mailOptions, (error, info) => { 
-  if (error) {
-    return console.log(error);
+  transporter.sendMail(mailOptions, (error, info) => { 
+    if (error) {
+    console.log(error);
   }
 
-res.send(('<p>success</p>'))
+res.sendFile(__dirname + '/index.html');
+  // res.send(info.response)
 
   console.log('Message %s sent: %s', info.messageId, info.response, info.accepted)
-})
+  })
+
+
 
 
 });

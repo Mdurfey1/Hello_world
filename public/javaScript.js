@@ -4,6 +4,7 @@ $(document).ready(function (){
 if ($('.navbar-collapse').hasClass('collapse') === true) {
   $('nav button').on('click', () => { 
     $('.collapse').toggle();
+    $('back2').toggleClass('greyBack');
     // $('.navbar-collapse').removeClass('.collapse')
   })
 }
@@ -33,9 +34,9 @@ $.get("/recentTracks", function(data){
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
                     What i've been listening to<i class = "fa fa-music text-primary"></i>
                     </h1>
-                    <h3 class = 'notListeningText' style = 'color: white; font-size: 14px; margin-top: -9px;'><span style = "color: black; text-shadow: 2px 2px 3px #fff; font-family: 'Oswald';"> Updated:</span><br><span style = "rgba(147,147,147, 1);text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-size: 14px;">${timeString}</span> </h3>
+                    <h3 class = 'notListeningText' style = 'color: white; font-size: 14px; margin-top: -9px;'><span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald';"> Updated:</span><br><span style = "rgba(147,147,147, 1);text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-size: 14px;">${timeString}</span> </h3>
                     <h1 class ='notListeningText' style = "color: white; font-size: 20px; font-weight: bold; margin-top: -7px; text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-variant: small-caps;">
-                      <span style = "color: black; text-shadow: 2px 2px 3px #fff; font-family: 'Oswald'; font-size: 14px">Last Track: </span><br>${lastTrack}<br>
+                      <span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald'; font-size: 14px">Last Track: </span><br>${lastTrack}<br>
                       ${lastArtist}
                     </h1>                  
                   <div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
@@ -82,11 +83,13 @@ $("#recent-tracks").html(`${listening}`);
 $.get('/recentAlbums', function(data){
 data = JSON.parse(data);
 var images = "";
-for (var i = 0; i <= 9; i++){ 
+for (var i = 0; i <= 11; i++){ 
 var url = data.topalbums.album[i].url
 var artistName = data.topalbums.album[i].artist.name
 var albumName = data.topalbums.album[i].name
 var rank = data.topalbums.album[i]["@attr"].rank;
+var albumImages = data.topalbums.album[i].image[3]["#text"];
+
 var topAlbumText = "";
 
 topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
@@ -94,7 +97,7 @@ topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this
 images += `
 
   <div class = "image text-center" id = "image">
-    <img class = "albumImages img-responsive" id = "albumImages" src = "${data.topalbums.album[i].image[3]["#text"]}" alt = "album Images"></img>
+    <img class = "albumImages img-responsive" id = "albumImages" src = "${albumImages}" alt = "Album image not found :("></img>
       <div class = "imageFace" onclick = "window.open('${url}')">
         <h2 class = "artistName">${artistName}</h2>
         <h2 class = "albumName">${albumName}</h2>
@@ -117,15 +120,12 @@ $("#submitButton").click( () => {
   phone=$("#phone").val();
   message=$("#message").val();
 
-  $.post('/signup', {email: email, name: name, phone: phone, message: message}, (b) => { 
+  $.post('/signup', (b) => { 
 
-    console.log(b);
+    $("b #form-messages").html(`<h1>Success!</h1>`)
 
-  });
-
+  })
 });
-
-
 
 
 

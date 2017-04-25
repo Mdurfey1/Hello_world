@@ -12,6 +12,10 @@
           url("../Users/michaeldurfey/Library/Fonts/Ailerons-Typeface.otf") format("embedded-opentype");
 }
 
+.greyBack { 
+background-color: rgba(147,147,147, .8);
+ }
+
 @media (max-width: 450px) {
   #socialButton{
     width: 17vmax!important;
@@ -199,6 +203,7 @@ color: black !important;
 opacity: 1;
 margin-right: 5px;
 background-color: rgba(147, 147, 147, 1);
+
 }
 
 nav {
