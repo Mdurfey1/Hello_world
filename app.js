@@ -49,12 +49,15 @@ var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&
 
 app.post('/signup', function(req, res, next) { 
 
-  console.log(req)
+  
+  if (Object.keys(req.body).length !== 0 && req.body.constructor !== Object) { 
+    console.log(req.body)
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
   var message = req.body.message;
-  var success;
+  
+
 
 
   let transporter = nodemailer.createTransport({ 
@@ -78,6 +81,8 @@ app.post('/signup', function(req, res, next) {
 
   console.log('Message %s sent: %s', info.messageId, info.accepted)
   })
+
+}
 
 res.redirect('back')
 
