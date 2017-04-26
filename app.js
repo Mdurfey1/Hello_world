@@ -2,6 +2,7 @@ var express = require('express');
 const nodemailer = require('nodemailer');
 var bodyParser = require('body-parser')
 var app = express();
+var router = express.Router();
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
@@ -48,7 +49,7 @@ var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&
 
 app.post('/signup', function(req, res, next) { 
 
-  console.log(req.body)
+  console.log(req)
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
@@ -65,10 +66,8 @@ app.post('/signup', function(req, res, next) {
   });
 
   let mailOptions = {
-    from: 'mpdurfey@gmail.com',
     to: 'mpdurfey@gmail.com',
     subject: `new contact from ${name}`,
-    replyTo: `${email}`,
     html: `<h1 style = "font-size: 12px">${name}<br>${email}<br>${phone}<br></h1><b>${message}</b>`
   };
 
@@ -77,14 +76,10 @@ app.post('/signup', function(req, res, next) {
     console.log(error);
   }
 
-res.sendFile(__dirname + '/index.html');
-  // res.send(info.response)
-
-  console.log('Message %s sent: %s', info.messageId, info.response, info.accepted)
+  console.log('Message %s sent: %s', info.messageId, info.accepted)
   })
 
-
-
+res.redirect('back')
 
 });
 

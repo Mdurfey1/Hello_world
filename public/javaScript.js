@@ -120,11 +120,12 @@ $("#submitButton").click( () => {
   phone=$("#phone").val();
   message=$("#message").val();
 
-  $.post('/signup', (b) => { 
+  $.post('/signup', {email: email, name: name, phone: phone, message: message}, (b) => { 
 
-    $("b #form-messages").html(`<h1>Success!</h1>`)
+    console.log(b);
 
-  })
+  });
+
 });
 
 

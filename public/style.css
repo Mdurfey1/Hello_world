@@ -366,7 +366,8 @@ background-repeat: no-repeat;
 /* Contact Section CSS */
 
 .contact-container {
-  background: url("http://i65.tinypic.com/2eg5pgp.jpg");
+  /*background-color: #F69779;*/
+  background: url("http://i63.tinypic.com/dnms7k.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
@@ -375,6 +376,9 @@ background-repeat: no-repeat;
   margin: auto auto auto;
   background-repeat: none;
   margin-top: -10px;
+  border-bottom: #337AB7;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
 .first-content {
@@ -564,6 +568,7 @@ font-family: 'Oswald';
   .recentTracksContainer {
   position: relative;
   padding-top: 3%;
+   margin-bottom: 3%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -662,6 +667,7 @@ font-family: 'Oswald';
   }
   .recentTracksContainer {
   padding-top: 3%;
+   margin-bottom: 3%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -695,6 +701,7 @@ font-family: 'Oswald';
 @media (max-width: 998px) and (min-width: 700px) {
   .recentTracksContainer {
   padding-top: 3%;
+   margin-bottom: 3%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -710,6 +717,7 @@ font-family: 'Oswald';
 }
 .recentTracksContainer {
   padding-top: 3%;
+   margin-bottom: 3%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -719,6 +727,8 @@ font-family: 'Oswald';
 
 @media (min-width: 1200px) {
   .recentTracksContainer {
+
+     margin-bottom: 3%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -972,6 +982,10 @@ width: 100%;
 .footerText {
       text-shadow: 1px 1px 2px black;
       color: #337AB7;
+      border-bottom: #337AB7;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      border-bottom-margin-left: -20px;
 }
 
 #footer-icons {
@@ -981,7 +995,8 @@ width: 100%;
 }
 
 .footer > p {
-  margin: 0px;
+margin: 0 -15% 1% -15%;
+padding-bottom: 1%;
 }
 
 
@@ -1033,6 +1048,9 @@ width: 100%;
 .footerText {
       text-shadow: 1px 1px 2px black;
       color: #337AB7;
+       border-bottom: #337AB7;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
 }
 
 #footer-icons {
@@ -1042,7 +1060,9 @@ width: 100%;
 }
 
 .footer > p {
-  margin: 0px;
+  margin: 0 -15% 1% -15%;
+  padding-bottom: 1%;
+
 }
 .nav-pills >li>a{
   }
@@ -1118,19 +1138,23 @@ width: 100%;
 }
 
 .footerText {
-      text-shadow: 1px 1px 2px black;
       color: #337AB7;
+       border-bottom: #337AB7;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      border-bottom-margin-left: -20px;
 }
 
 #footer-icons {
   width: 100%;
   text-align: center;
   font-size: 2em;
-  text-shadow: 1px 1px 2px black;
+ 
 }
 
 .footer > p {
-  margin: 0px;
+  margin: 0 -15% 1% -15%;
+  padding-bottom: 1%;
 }
 .nav-pills >li>a{
   }
