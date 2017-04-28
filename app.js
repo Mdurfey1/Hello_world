@@ -51,7 +51,7 @@ app.post('/signup', function(req, res, next) {
 
   
   if (Object.keys(req.body).length !== 0 && req.body.constructor !== Object) { 
-    console.log(req.body)
+    console.log(" SOME SHIT: ", req.body)
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
@@ -76,18 +76,16 @@ app.post('/signup', function(req, res, next) {
 
   transporter.sendMail(mailOptions, (error, info) => { 
     if (error) {
-    console.log(error);
-  }
-
-  console.log('Message %s sent: %s', info.messageId, info.accepted)
+      console.log("HERES THE ERROR: ", error);
+    }
+    console.log(`Message ${info.messageId} sent: ${info.accepted}`)
   })
 
 }
 
-res.redirect('back')
+res.send(`Thanks for the message!`)
 
 });
-
 
 // app.post()
 

@@ -1,5 +1,8 @@
 $(document).ready(function (){
- 
+  $("#submitButton").click(()=>{
+    console.log('blarg')
+    handleContactSubmit();
+  });
 
 if ($('.navbar-collapse').hasClass('collapse') === true) {
   $('nav button').on('click', () => { 
@@ -114,20 +117,23 @@ $(".images").html(`${images}`)
 })
 
 var email,name,phone,message;
-$("#submitButton").click( () => {
+let handleContactSubmit = function(){
+  console.log('submitted')
   email=$("#email").val();
   name=$("#name").val();
   phone=$("#phone").val();
   message=$("#message").val();
 
-  $.post('/signup', {email: email, name: name, phone: phone, message: message}, (b) => { 
-
-    console.log(b);
-
-  });
-
-});
-
-
+  $.post('/signup', {email: email, name: name, phone: phone, message: message})
+  .done(d => {
+    $("#form-messages").text(d);
+    $("#email").val('');
+    $("#name").val('');
+    $("#phone").val('');
+    $("#message").val('');
+  }).fail(e => {
+    console.log(e)
+  })
+}
 
 })

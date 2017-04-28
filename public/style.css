@@ -12,6 +12,19 @@
           url("../Users/michaeldurfey/Library/Fonts/Ailerons-Typeface.otf") format("embedded-opentype");
 }
 
+ #form-messages{
+  display: flex;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Raleway';
+      font-size: 4vmax;
+      font-weight: bold;
+      font-variant: small-caps;
+ }
+
 @media (max-width: 450px) {
   #socialButton{
     width: 17vmax!important;
@@ -641,6 +654,7 @@ font-family: 'Oswald';
       flex-grow:1;
   justify-content: center;
  }
+
 
  #lastAlbumImage {
   width: 50%;
