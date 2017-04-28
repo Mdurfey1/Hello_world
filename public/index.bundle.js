@@ -1,6 +1,10 @@
 'use strict';
 
 $(document).ready(function () {
+  $("#submitButton").click(function () {
+    console.log('blarg');
+    handleContactSubmit();
+  });
 
   if ($('.navbar-collapse').hasClass('collapse') === true) {
     $('nav button').on('click', function () {
@@ -59,15 +63,21 @@ $(document).ready(function () {
   });
 
   var email, name, phone, message;
-  $("#submitButton").click(function () {
+  var handleContactSubmit = function handleContactSubmit() {
+    console.log('submitted');
     email = $("#email").val();
     name = $("#name").val();
     phone = $("#phone").val();
     message = $("#message").val();
 
-    $.post('/signup', { email: email, name: name, phone: phone, message: message }, function (b) {
-
-      console.log(b);
+    $.post('/signup', { email: email, name: name, phone: phone, message: message }).done(function (d) {
+      $("#form-messages").text(d);
+      $("#email").val('');
+      $("#name").val('');
+      $("#phone").val('');
+      $("#message").val('');
+    }).fail(function (e) {
+      console.log(e);
     });
-  });
+  };
 });
