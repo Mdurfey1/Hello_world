@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script type = "text/javascript" src = "/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src = "/index.bundle.js"></script>
+  <script type="text/javascript" src = "/javaScript.js"></script>
   <script src = "/moment/moment.js"></script> 
   <!-- <script src = "/app.js"></script> -->
   <link rel="stylesheet" type="text/css" href="/flickity/dist/flickity.css">
@@ -176,6 +176,10 @@
   </div>
 
   <div class = "row">
+  <div class = "musicButton" id = "musicButton">
+     <button type = "button" class = "btn btn-info btn-primary musicButton" id = "musicButtonElement">
+     </button>
+  </div>
   <div class = "col-lg-12 recentTracksContainer" id = "music">
     <div class = " col-lg-4 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-12 text-center recent-tracks text-center" id = "recent-tracks">
     </div>
@@ -192,7 +196,7 @@
   <div class = "container-fluid footer-container ">
     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"> 
       <footer class = "footer">
-        <p class = "text-center footerText ">Made with Coffee and <i class = "fa fa-music" id = "footer-icons" style = "font-size: 1.7em"></i><br> by Michael Durfey</a>
+        <span class = "text-center footerText "></span>
         <div class = "nav-pillsContainer">
         <ul class="nav nav-pills navbar-static-bottom footer-links"> 
           <li><a href="https://github.com/michaeldurfey" target ="_blank"><i class = "fa fa-github-square fa-lg fa-fw" id = "footer-icons" style = "position: relative"></i></a></li> 

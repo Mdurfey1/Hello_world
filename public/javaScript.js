@@ -2,6 +2,10 @@ $(document).ready(function (){
   $("#submitButton").click(()=>{
     handleContactSubmit();
   });
+var back1 = "url('/images/back2.jpg')"
+
+    //v-- will not work! 
+    // $(document).getElementById("bottom").css(`"background", 'url(${back1})'`)
 
 
 if ($('.navbar-collapse').hasClass('collapse') === true) {
@@ -12,9 +16,23 @@ if ($('.navbar-collapse').hasClass('collapse') === true) {
   })
 }
 
-$.get("/lastFM", function(d){ 
-  d = JSON.parse(d);
-})
+$("#musicButtonElement").html(`<i class = "fa fa-music"></i> Display Music`);
+
+$("#music").toggle(1000)
+
+$("#musicButtonElement").on("click", () => {$("#music").toggle(1000)})
+$("#musicButtonElement").on("click", () => {
+  console.log($("#musicButtonElement").html())
+  if ($("#musicButtonElement").html() === `<i class="fa fa-music"></i> Display Music`){
+      $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Hide Music`)
+  }
+  else {
+    $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Display Music`)
+  }
+
+});
+
+
 
 $.get("/recentTracks", function(data){ 
   data = JSON.parse(data);
