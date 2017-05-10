@@ -1,6 +1,5 @@
 $(document).ready(function (){
   $("#submitButton").click(()=>{
-    console.log('blarg')
     handleContactSubmit();
   });
 
@@ -27,7 +26,7 @@ $.get("/recentTracks", function(data){
   var listening = "";
   var images = "";
 
-  if (dataSet[0]["@attr"] === undefined) { 
+  if (dataSet[0]["@attr"] === undefined){ 
     var lastDate = dataSet[0].date["#text"];
     var offset = new Date().getTimezoneOffset();
     var a = moment(Date.parse(lastDate)).subtract(offset, 'minutes');
@@ -35,11 +34,22 @@ $.get("/recentTracks", function(data){
 
     listening += `
                     <h1 class = 'nowListeningText' style = 'color: white;font-size: 21px; font-variant: small-caps; font-family: Raleway; text-shadow: 2px 2px 3px #000'>
-                    What i've been listening to<i class = "fa fa-music text-primary"></i>
+                      What i've been listening to<i class = "fa fa-music text-primary"></i>
                     </h1>
-                    <h3 class = 'notListeningText' style = 'color: white; font-size: 14px; margin-top: -9px;'><span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald';"> Updated:</span><br><span style = "rgba(147,147,147, 1);text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-size: 14px;">${timeString}</span> </h3>
+                    <h3 class = 'notListeningText' style = 'color: white; font-size: 14px; margin-top: -9px;'><span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald';"> 
+                      Updated:
+                      <br>
+                      <span style = "rgba(147,147,147, 1);text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-size: 14px;">
+                      ${timeString}
+                      </span> 
+                    </h3>
                     <h1 class ='notListeningText' style = "color: white; font-size: 20px; font-weight: bold; margin-top: -7px; text-shadow: 2px 2px 3px #000; font-family: 'Raleway'; font-variant: small-caps;">
-                      <span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald'; font-size: 14px">Last Track: </span><br>${lastTrack}<br>
+                      <span style = "color: white; text-shadow: 2px 2px 3px #000; font-family: 'Oswald'; font-size: 14px">
+                      Last Track: 
+                      </span>
+                      <br>
+                      ${lastTrack}
+                      <br>
                       ${lastArtist}
                     </h1>                  
                   <div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
@@ -67,9 +77,6 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <h1 class = 'nowListeningText'>
                       ${lastArtist}
               </h1>
-              <p class = 'nowListeningAlbum' id = 'resultText'>
-                ${lastalbum}
-              </p>
               <div class = "currentAlbumImage text-center" id = "lastAlbumImage">
                     <img class = 'currentAlbum' id = 'currentAlbum' src = '${lastImg}' alt = 'Picture not available :('></img>
                     <div class = "currentAlbumImageFace" align="center" onclick = "window.open('${lastURL}')">
