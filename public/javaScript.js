@@ -3,6 +3,7 @@ $(document).ready(function (){
     handleContactSubmit();
   });
 
+
 if ($('.navbar-collapse').hasClass('collapse') === true) {
   $('nav button').on('click', () => { 
     $('.collapse').toggle();

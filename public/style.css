@@ -132,7 +132,7 @@ width: 100%;
 }
 
 div.about-container {
-background-image: url("http://i68.tinypic.com/33athj7.jpg");
+background-image: url("/images/back1.jpg");
 padding-top: 10%;
 background-repeat: no-repeat;
 background-size: cover;
@@ -248,7 +248,7 @@ border-color: black;
 /*Portfolio CSS Start~~~~~~~~*/
 
 .back2 {
-background: url("http://i66.tinypic.com/2h7pcup.jpg");
+background: url("/images/back3.jpg");
 background-repeat: no-repeat;
  background-size: cover;
  background-position:center;
@@ -376,7 +376,7 @@ background-repeat: no-repeat;
 
 .contact-container {
   /*background-color: #F69779;*/
-  background: url("http://i63.tinypic.com/dnms7k.jpg");
+  background: url("/images/back2.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100%;
