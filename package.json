@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel --presets es2015 public/javaScript.js -o public/index.bundle.js",
-    "uglify-js": "uglify-js public/javaScript.js -o public/javaScript.js",
-    "start": " npm run uglify-js | npm run babel | node app.js"
+    "uglify-js": "uglify-js public/javaScript.js -o public/jsCompressed.js",
+    "start": "npm run babel | npm run uglify-js | node app.js"
   },
   "repository": {
     "type": "git",
