@@ -56,9 +56,6 @@ nav{background-color:rgba(211,211,211,.8)}
 form{margin-top:30px}
 #h2{font-family:'Raleway';color:rgba(0,0,0,1);text-shadow:4px 4px 4px rgba(147,147,147,1);font-size:30px;font-weight:700;text-align:center;padding-top:10px}
 .topAlbumText{font-size:24px;font-weight:700;color:#fff;text-shadow:2px 2px 3px #000;font-family:'Raleway';text-align:center;font-variant:small-caps}
-@media(min-width:1200px) {
-.keepInTouchText{margin-top:15%!important}
-}
 .keepInTouchText{background-color:#fff;border-style:none;font-family:'Oswald';width:auto;height:100%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;text-align:center;margin-right:3%;border-radius:10px;position:relative;box-shadow:inset 1px 2px 8px}
 .first-contentContainer{display:flex;flex-direction:column;justify-content:center}
 .hidden{display:none}
