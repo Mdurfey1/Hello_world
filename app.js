@@ -51,7 +51,6 @@ app.post('/signup', function(req, res, next) {
 
   
   if (Object.keys(req.body).length !== 0 && req.body.constructor !== Object) { 
-    console.log(" SOME SHIT: ", req.body)
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
