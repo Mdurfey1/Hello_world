@@ -9,28 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <header>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Oswald|Arimo" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet"  type="text/css" href="/style.css">
-  <script type="text/javascript" src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src = "/javaScript.js"></script>
-  <noscript id = "deferred-styles">
-    <link rel="stylesheet"  type="text/css" href="/style.css">
-  </noscript>
-  <script>
-     var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-  </script>
-  <script src = "/moment/moment.js"></script> 
 </header>
 
 </head>
@@ -223,5 +201,29 @@
     </div>
   </div>
 </div><!--contact-container-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  type="text/css" href="/style.css">
+  <script type="text/javascript" src = "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src = "/javaScript.js"></script>
+  <noscript id = "deferred-styles">
+    <link rel="stylesheet"  type="text/css" href="/style.css">
+  </noscript>
+  <script>
+     var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+  </script>
+  <script src = "/moment/moment.js"></script> 
+  
 </body>
 </html>
