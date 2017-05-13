@@ -22,14 +22,12 @@ $("#music").toggle(1000)
 
 $("#musicButtonElement").on("click", () => {$("#music").toggle(1000)})
 $("#musicButtonElement").on("click", () => {
-  console.log($("#musicButtonElement").html())
   if ($("#musicButtonElement").html() === `<i class="fa fa-music"></i> Display Music`){
       $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Hide Music`)
   }
   else {
     $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Display Music`)
   }
-
 });
 
 
@@ -108,39 +106,38 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
 
 $("#recent-tracks").html(`${listening}`);
 
+})
 
-$.get('/recentAlbums', function(data){
-data = JSON.parse(data);
-var images = "";
-for (var i = 0; i <= 11; i++){ 
-var url = data.topalbums.album[i].url
-var artistName = data.topalbums.album[i].artist.name
-var albumName = data.topalbums.album[i].name
-var rank = data.topalbums.album[i]["@attr"].rank;
-var albumImages = data.topalbums.album[i].image[3]["#text"];
+  $.get('/recentAlbums', function(data){
+  data = JSON.parse(data);
+  var images = "";
+  for (var i = 0; i <= 11; i++){ 
+  var url = data.topalbums.album[i].url
+  var artistName = data.topalbums.album[i].artist.name
+  var albumName = data.topalbums.album[i].name
+  var rank = data.topalbums.album[i]["@attr"].rank;
+  var albumImages = data.topalbums.album[i].image[3]["#text"];
 
-var topAlbumText = "";
+  var topAlbumText = "";
 
-topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
+  topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
+            `
+  images += `
+
+    <div class = "image text-center" id = "image">
+      <img class = "albumImages img-responsive" id = "albumImages" src = "${albumImages}" alt = "Album image not found :("></img>
+        <div class = "imageFace" onclick = "window.open('${url}')">
+          <h2 class = "artistName">${artistName}</h2>
+          <h2 class = "albumName">${albumName}</h2>
+          <h2 class = "rank">Rank: <br>${rank}</h2>
+        </div>
+    </div>
           `
-images += `
-
-  <div class = "image text-center" id = "image">
-    <img class = "albumImages img-responsive" id = "albumImages" src = "${albumImages}" alt = "Album image not found :("></img>
-      <div class = "imageFace" onclick = "window.open('${url}')">
-        <h2 class = "artistName">${artistName}</h2>
-        <h2 class = "albumName">${albumName}</h2>
-        <h2 class = "rank">Rank: <br>${rank}</h2>
-      </div>
-  </div>
-        `
-    }
-$(".topAlbumText").html(`${topAlbumText}`)
-$(".images").html(`${images}`)
+      }
+  $(".topAlbumText").html(`${topAlbumText}`)
+  $(".images").html(`${images}`)
 
   })
-
-})
 
 var email,name,phone,message;
 let handleContactSubmit = function(){

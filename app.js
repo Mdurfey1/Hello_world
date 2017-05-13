@@ -2,7 +2,6 @@ var express = require('express');
 const nodemailer = require('nodemailer');
 var bodyParser = require('body-parser')
 var app = express();
-var router = express.Router();
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
