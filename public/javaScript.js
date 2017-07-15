@@ -4,15 +4,12 @@ $(document).ready(function (){
   });
 var back1 = "url('/images/back2.jpg')"
 
-    //v-- will not work! 
-    // $(document).getElementById("bottom").css(`"background", 'url(${back1})'`)
 
 
 if ($('.navbar-collapse').hasClass('collapse') === true) {
   $('nav button').on('click', () => { 
     $('.collapse').toggle();
     $('back2').toggleClass('greyBack');
-    // $('.navbar-collapse').removeClass('.collapse')
   })
 }
 
