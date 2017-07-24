@@ -125,7 +125,7 @@ form{margin-top:30px}
 .images{margin-top:0;padding-left:0}
 }
 .image h2{text-transform:uppercase;text-align:center;font-weight:400;position:relative;width:100%;overflow:hidden;-ms-transform:rotate(360deg) skew(300deg,100deg);transform:rotate(360deg) skew(300deg,100deg);transition:600ms}
-.artistName{padding-right:5%;padding-left:5%;font-size:1.7vmax;color:#fff;font-weight:700;font-family:'Raleway'}
+.artistName{padding-right:5%;padding-left:5%;font-size:100%;color:#fff;font-weight:700;font-family:'Raleway'}
 .albumName{padding-top:6%;padding-left:5%;padding-right:5%;font-size:1vmax;font-family:'Oswald';color:#fff;width:100%}
 .image .imageFace{background-color:rgba(0,0,0,0.8);opacity:0;transition:1000ms;width:100%;height:100%;position:absolute;overflow:hidden;padding-top:8%;padding-right:0!important;padding-left:0!important;top:0;left:0}
 .image{text-align:center;overflow:hidden}
