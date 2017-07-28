@@ -7,10 +7,8 @@
   <meta charset="UTF-8">
   <title>MDurfey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <header>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Oswald|Arimo" rel="stylesheet">
-</header>
-
+  <link rel="stylesheet" href="/animate.css/animate.min.css">
 </head>
 <body>
 <!--header-->
@@ -25,7 +23,6 @@
     <a class="navbar-brand name" href="http://michaeldurfey.herokuapp.com" target= "_blank" style = "font-family: 'raleway'; font-weight: 'thin'">Michael Durfey</a>
     </div>
               
-              <!--fixthis-->
     <div class="collapse navbar-collapse pull-right" id= "navbar">
         <ul class="nav navbar-nav navbar-collapse">
           <li><a href="#top" class="color-me">About</a></li>
@@ -39,69 +36,69 @@
 <!--nav-->
   
 <!--About container!-->  
-<div class = "about-container container-fluid canvas" id = "top" id = 'canvas'>
-  <div class ="row">
-    <div class = "col-lg-12">
-  <!--h1-->
-      <div class="mainTitle text-center">Software Engineer</div>
-      <div class ="imgdiv">
-        <img class = "img-responsive headshot center-block" alt = "profile pic" src="/images/profile.jpg" style = "max-width: 15%" ></img>
-      </div> 
-  
-      <hr class = "border" style = "border-color: black; border-style: solid">
+  <div class = "about-container container-fluid canvas" id = "top" id = 'canvas'>
+    <div class ="row">
+      <div class = "col-lg-12">
+    <!--h1-->
+        <div class="mainTitle text-center animated slideInLeft">Software Engineer</div>
+        <div class ="imgdiv">
+          <img class = "img-responsive headshot center-block" alt = "profile pic" src="/images/profile.jpg" style = "max-width: 15%" ></img>
+        </div> 
     
-      <div class = "buttons text-center" role = "group">
+        <hr class = "border" style = "border-color: black; border-style: solid">
       
-        <a class = "btn btn-default" role = "button" target = "_blank" href = "https://www.linkedin.com/in/michael-durfey-5bb67736" id = "socialButton"><i class = "fa fa-linkedin-square fa-lg fa-fw"></i>Linkedin</a>
-        <a class = "btn btn-default" id = "socialButton" href = "https://www.facebook.com/michael.pietro" role = "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-facebook-square fa-lg fa-fw"></i>Facebook</a>
-        <a class = "btn btn-default" id = "socialButton" href = "https://github.com/michaeldurfey" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-github-square fa-lg fa-fw"></i>Github</a>
-        <a class = "btn btn-default" id = "socialButton" href = "https://twitter.com/Michaelpietro_" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-twitter-square fa-lg fa-fw"></i>Twitter</a>
+        <div class = "buttons text-center" role = "group">
         
+          <a class = "btn btn-default" role = "button" target = "_blank" href = "https://www.linkedin.com/in/michael-durfey-5bb67736" id = "socialButton"><i class = "fa fa-linkedin-square fa-lg fa-fw"></i>Linkedin</a>
+          <a class = "btn btn-default" id = "socialButton" href = "https://www.facebook.com/michael.pietro" role = "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-facebook-square fa-lg fa-fw"></i>Facebook</a>
+          <a class = "btn btn-default" id = "socialButton" href = "https://github.com/michaeldurfey" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-github-square fa-lg fa-fw"></i>Github</a>
+          <a class = "btn btn-default" id = "socialButton" href = "https://twitter.com/Michaelpietro_" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-twitter-square fa-lg fa-fw"></i>Twitter</a>
+          
+        </div>
+          <h3 class = "WebDev text-center">Web Developer - UX Designer</h3> 
       </div>
-        <h3 class = "WebDev text-center">Web Developer - UX Designer</h3> 
     </div>
   </div>
-</div>
 <!--aboutcontainer-->
 
 
 
 <!--Portfolio-->
-<div class = "container-fluid back2" id ="middle">
-<div class = "col-lg-12">
-  <h5 class = "h5 text-center" id = "h5">Portfolio</h5>
-  <hr class = "hr2 text-center">      
-  <br>
-  <div class = "row">
-    <div class = "portRow">
-      <div class = "figure">
-          <img src="/images/weather.jpg" class="figure-img rounded portfolioPic img-responsive center-block" alt="weather app"/>
-          <div class = "face" onclick = "window.open('https://weathercurrent.herokuapp.com')">
-          <h2>Current Weather</h2>
+  <div class = "container-fluid back2" id ="middle">
+    <div class = "col-lg-12">
+      <h5 class = "h5 text-center" id = "h5">Portfolio</h5>
+      <hr class = "hr2 text-center">      
+      <br>
+      <div class = "row">
+        <div class = "portRow">
+          <div class = "figure">
+              <img src="/images/weather.jpg" class="figure-img rounded portfolioPic img-responsive center-block" alt="weather app"/>
+              <div class = "face" onclick = "window.open('https://weathercurrent.herokuapp.com')">
+              <h2>Current Weather</h2>
+              </div>
+          </div>         
+          <div class = "figure">
+              <img src="/images/quote.jpg" class="figure-img rounded text-center img-responsive center-block" alt="quote generator"/>
+              <div class = "face" onclick = "window.open('https://redditquotes.herokuapp.com/')">
+              <h2>Quote Generator</h2>
+              </div>
           </div>
-      </div>         
-      <div class = "figure">
-          <img src="/images/quote.jpg" class="figure-img rounded text-center img-responsive center-block" alt="quote generator"/>
-          <div class = "face" onclick = "window.open('https://redditquotes.herokuapp.com/')">
-          <h2>Quote Generator</h2>
+          <div class = "figure">
+              <img src="/images/twitch.jpg" class="rounded text-center img-responsive center-block" alt="Twitch App"/>
+              <div class = "face" onclick = "window.open('https://twitchclone.herokuapp.com/')">
+              <h2>Twitch Viewer</h2>
+              </div>
+          </div> 
+          <div class = "figure">
+              <img src="/images/wikiview.jpg" class=" rounded text-center img-responsive center-block" alt="wikiview"/>
+              <div class = "face" onclick= "window.open('https://wikiview.herokuapp.com/')">
+              <h2>Wikipedia Viewer</h2>
+              </div>
           </div>
-      </div>
-      <div class = "figure">
-          <img src="/images/twitch.jpg" class="rounded text-center img-responsive center-block" alt="Twitch App"/>
-          <div class = "face" onclick = "window.open('https://twitchclone.herokuapp.com/')">
-          <h2>Twitch Viewer</h2>
-          </div>
-      </div> 
-      <div class = "figure">
-          <img src="/images/wikiview.jpg" class=" rounded text-center img-responsive center-block" alt="wikiview"/>
-          <div class = "face" onclick= "window.open('https://wikiview.herokuapp.com/')">
-          <h2>Wikipedia Viewer</h2>
-          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div><!--Portfolio-Container-->
+  </div><!--Portfolio-Container-->
 
 <!-- Contact -->
 <div class = "contact-container container-fluid" id = "bottom">
@@ -224,6 +221,5 @@
       else window.addEventListener('load', loadDeferredStyles);
   </script>
   <script src = "/moment/moment.js"></script> 
-
 </body>
 </html>

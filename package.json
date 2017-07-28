@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/MichaelDurfey/Portfolio-Website#readme",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "babel-cli": "^6.24.0",
     "babel-preset-es2015": "^6.24.0",
     "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.2",
     "moment": "^2.18.1",
     "nodemailer": "^4.0.1",
