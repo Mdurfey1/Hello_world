@@ -62,7 +62,7 @@ app.post('/signup', function(req, res, next) {
     service: 'gmail',
     auth: {
       user: 'mpdurfey@gmail.com',
-      pass: 'mpdfocusrite!'
+      pass: 'xxxxxxxxx'
     }
   });
 
