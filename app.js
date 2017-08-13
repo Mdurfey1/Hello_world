@@ -2,12 +2,13 @@ var express = require('express');
 const nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var app = express();
+require('dotenv').config()
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
+app.use(express.static(__dirname + '/config'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -18,9 +19,10 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 
 var request = require('request');
+const apiKey = process.env.APIKEY;
 
 app.get('/lastFM', function(req, res) {
-var lastFMURL = "https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=almostcrimes_&api_key=cee8eebeb4ff28b14cceee8e805b31b3&period=1month&format=json";
+var lastFMURL = `https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&user=almostcrimes_&api_key=${apiKey}&period=1month&format=json`;
   request(lastFMURL, function (error, response, body) { 
     console.log('error:', error); // Print the error if one occurred
     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -29,7 +31,7 @@ var lastFMURL = "https://ws.audioscrobbler.com/2.0/?method=user.getTopArtists&us
 })
 
 app.get('/recentTracks', function(req, res){
-var recentTracks = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=almostcrimes_&api_key=cee8eebeb4ff28b14cceee8e805b31b3&format=json"
+var recentTracks = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=almostcrimes_&api_key=${apiKey}&format=json`
 request(recentTracks, function (error, response, body) { 
     console.log('error:', error); // Print the error if one occurred
     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -38,7 +40,7 @@ request(recentTracks, function (error, response, body) {
 })
 
 app.get('/recentAlbums', function(req, res){ 
-var recentAlbums = "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=almostcrimes_&period=1month&api_key=cee8eebeb4ff28b14cceee8e805b31b3&format=json"
+var recentAlbums = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=almostcrimes_&period=1month&api_key=${apiKey}&format=json`
   request(recentAlbums, function(error, response, body) {
     console.log('error:', error);
     console.log('statusCode:', response && response.statusCode);
@@ -61,13 +63,13 @@ app.post('/signup', function(req, res, next) {
   let transporter = nodemailer.createTransport({ 
     service: 'gmail',
     auth: {
-      user: 'mpdurfey@gmail.com',
-      pass: 'mpdfocusrite!'
+      user: process.env.ADMIN_USER,
+      pass: process.env.ADMIN_PASS
     }
   });
 
   let mailOptions = {
-    to: 'mpdurfey@gmail.com',
+    to: process.env.ADMIN_USER,
     subject: `new contact from ${name}`,
     html: `<h1 style = "font-size: 12px">${name}<br>${email}<br>${phone}<br></h1><b>${message}</b>`
   };
