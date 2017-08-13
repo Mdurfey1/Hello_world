@@ -63,8 +63,13 @@ app.post('/signup', function(req, res, next) {
   let transporter = nodemailer.createTransport({ 
     service: 'gmail',
     auth: {
+<<<<<<< HEAD
       user: process.env.ADMIN_USER,
       pass: process.env.ADMIN_PASS
+=======
+      user: 'mpdurfey@gmail.com',
+      pass: 'xxxxxxxxx'
+>>>>>>> refs/remotes/origin/master
     }
   });
 
