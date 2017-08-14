@@ -40,6 +40,7 @@ $.get("/recentTracks", function(data){
   var listening = "";
   var images = "";
 
+
   if (dataSet[0]["@attr"] === undefined){ 
     var lastDate = dataSet[0].date["#text"];
     var offset = new Date().getTimezoneOffset();
@@ -65,16 +66,16 @@ $.get("/recentTracks", function(data){
                       ${lastTrack}
                       <br>
                       ${lastArtist}
-                    </h1>                  
-                  <div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
+                    </h1>       
+                  `
+
+                  if (lastImg) { listening += `<div class = "lastAlbumImage text-center center-block" id = "lastAlbumImage">
                     <img class ="lastAlbum" id = "lastAlbum" src = "${lastImg}"></img>                  
                     <div class = "lastAlbumImageFace" onclick = "window.open('${lastURL}')">
                       <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 4vh; color: white; width: 100%; font-family: 'Raleway'; font-weight: bold;">${lastArtist}</h2>
                       <h2 class = "lastAlbumName" style = "padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 3vh; font-family: 'Raleway'; color: white; width: 100%; font-weight: bold;">${lastalbum}</h2>
                     </div>
-                  </div>
-    
-                  `
+                  </div> : console.log('Artist Image not available')` }
 }
 
 else if (dataSet[0]["@attr"].nowplaying === "true") {
@@ -91,14 +92,17 @@ else if (dataSet[0]["@attr"].nowplaying === "true") {
               <h1 class = 'nowListeningText'>
                       ${lastArtist}
               </h1>
+              `
+              if (lastImg){
+                listening +=`
               <div class = "currentAlbumImage text-center" id = "lastAlbumImage">
                     <img class = 'currentAlbum' id = 'currentAlbum' src = '${lastImg}' alt = 'Picture not available :('></img>
                     <div class = "currentAlbumImageFace" align="center" onclick = "window.open('${lastURL}')">
                       <h2 class = "currentArtistName">${lastArtist}</h2>
                       <h2 class = "currentAlbumName">${lastalbum}</h2>
                     </div>
-              </div>
-            `
+              </div>`
+            }
 }
 
 $("#recent-tracks").html(`${listening}`);
@@ -119,7 +123,8 @@ $("#recent-tracks").html(`${listening}`);
 
   topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
             `
-  images += `
+
+  if (albumImages) {images += `
 
     <div class = "image text-center" id = "image">
       <img class = "albumImages img-responsive" id = "albumImages" src = "${albumImages}" alt = "Album image not found :("></img>
@@ -130,11 +135,14 @@ $("#recent-tracks").html(`${listening}`);
         </div>
     </div>
           `
-      }
+        }
+  }
   $(".topAlbumText").html(`${topAlbumText}`)
   $(".images").html(`${images}`)
 
-  })
+  }) // GET RECENT ALBUMS END
+
+
 
 var email,name,phone,message;
 let handleContactSubmit = function(){
