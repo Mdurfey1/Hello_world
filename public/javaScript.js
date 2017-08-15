@@ -75,7 +75,7 @@ $.get("/recentTracks", function(data){
                       <h2 class = "lastArtistName" style = "padding-right: 5%; padding-left: 5%; padding-top: 10%; font-size: 4vh; color: white; width: 100%; font-family: 'Raleway'; font-weight: bold;">${lastArtist}</h2>
                       <h2 class = "lastAlbumName" style = "padding-left: 5%; padding-right: 5%; padding-top: 5%; font-size: 3vh; font-family: 'Raleway'; color: white; width: 100%; font-weight: bold;">${lastalbum}</h2>
                     </div>
-                  </div> : console.log('Artist Image not available')` }
+                  </div>` }
 }
 
 else if (dataSet[0]["@attr"].nowplaying === "true") {
