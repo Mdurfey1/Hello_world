@@ -1,4 +1,4 @@
-$(document).ready(function (){
+
   $("#submitButton").click(()=>{
     handleContactSubmit();
   });
@@ -163,5 +163,3 @@ let handleContactSubmit = function(){
     console.log(e)
   })
 }
-
-})
