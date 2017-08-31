@@ -196,14 +196,13 @@ nav {
     margin-bottom: 80px
 }
 .figure {
-    width: 34vmax;
+    width: 27vmax;
     overflow: hidden;
     position: relative;
     padding-left: 0!important;
     padding-right: 0!important;
     top: 0;
     left: 0;
-    margin-left: ;
     margin: 27px!important
 }
 .figure .face {
@@ -409,7 +408,7 @@ form {
 .listening-habbits {
     font-family: Roboto;
     font-size: 15px;
-    font-color: #fff
+    color: #fff
 }
 #albumImages {
     width: 100%
@@ -803,7 +802,6 @@ form {
         border-bottom: #337AB7;
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-margin-left: -20px
     }
     #footer-icons {
         width: 100%;
@@ -830,7 +828,7 @@ form {
         padding-top: 15px;
         text-align: center;
         font-family: oswald;
-        font-color: #000;
+        color: #000;
         font-size: 1em;
         font-weight: 700;
         float: center
@@ -885,7 +883,7 @@ form {
         padding-top: 15px;
         text-align: center;
         font-family: oswald;
-        font-color: #000;
+        color: #000;
         font-size: 1em;
         font-weight: 700;
         float: center
@@ -922,7 +920,6 @@ form {
         border-bottom: #337AB7;
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-margin-left: -20px
     }
     #footer-icons {
         width: 100%;
@@ -949,7 +946,7 @@ form {
         padding-top: 15px;
         text-align: center;
         font-family: oswald;
-        font-color: #000;
+        color: #000;
         font-size: 1em;
         font-weight: 700;
         float: center
