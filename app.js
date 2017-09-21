@@ -3,12 +3,14 @@ const nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var app = express();
 require('dotenv').config()
+var helmet = require('helmet')
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/config'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(helmet())
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
