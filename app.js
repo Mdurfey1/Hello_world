@@ -23,17 +23,6 @@ app.set('view engine', 'ejs');
 var request = require('request');
 const apiKey = process.env.APIKEY;
 
-// app.get('/lastFM', function(req, res) {
-//   console.log(req.query.artist)
-//   let lastFMURL = 'https://itunes.apple.com/search?term=john+coltrane+quartet&entity=musicArtist'
-// // var lastFMURL = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=johncoltranequartet&api_key=${apiKey}&format=json`;
-//   request(lastFMURL, function (error, response, body) { 
-//     console.log('error:', error); // Print the error if one occurred
-//     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//     res.send(response.body);
-//   })
-// })
-
 app.get('/recentTracks', function(req, res){
 var recentTracks = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=almostcrimes_&api_key=${apiKey}&format=json`
 request(recentTracks, function (error, response, body) { 
