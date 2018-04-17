@@ -20,15 +20,15 @@
       <button type="button" class ="navbar-toggle collapsed hidden-lg-up" data-toggle="collapse" data-target="#navbar">
         <i class = "fa fa-bars"></i>
       </button>
-    <a class="navbar-brand name" href="http://michaeldurfey.herokuapp.com" target= "_blank" style = "font-family: 'raleway'; font-weight: 'thin'">Michael Durfey</a>
+    <a class="navbar-brand name" href="http://michaeldurfey.herokuapp.com" target= "_blank">Michael Durfey</a>
     </div>
               
     <div class="collapse navbar-collapse pull-right" id= "navbar">
         <ul class="nav navbar-nav navbar-collapse">
           <li><a href="#top" class="color-me">About</a></li>
-            <li><a href="#middle" class="color-me">Portfolio</a></li>
-          <li><a href="#bottom" class="color-me">Contact</a></li>
-          <li><a href="#musicButtonElement" class = "color-me">Music</a></li>
+            <li><a href="#h5" class="color-me">Portfolio</a></li>
+          <li><a href="#contact" class="color-me">Contact</a></li>
+          <li><a href="#music" class = "color-me">Music</a></li>
         </ul><!-- /.nav --> 
     </div>
   </div>
@@ -42,20 +42,20 @@
     <!--h1-->
         <div class="mainTitle text-center animated slideInLeft">Software Engineer</div>
         <div class ="imgdiv">
-          <img class = "img-responsive headshot center-block" alt = "profile pic" src="/images/profile.jpg" style = "max-width: 15%" ></img>
+          <img class = "img-responsive headshot center-block" alt = "profile pic" src="/images/naturePhoto.jpg" style = "max-width: 15%" ></img>
         </div> 
     
         <hr class = "border" style = "border-color: black; border-style: solid">
       
         <div class = "buttons text-center" role = "group">
         
-          <a class = "btn btn-default" role = "button" target = "_blank" href = "https://www.linkedin.com/in/michael-durfey-5bb67736" id = "socialButton"><i class = "fa fa-linkedin-square fa-lg fa-fw"></i>Linkedin</a>
-          <a class = "btn btn-default" id = "socialButton" href = "https://www.facebook.com/michael.pietro" role = "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-facebook-square fa-lg fa-fw"></i>Facebook</a>
-          <a class = "btn btn-default" id = "socialButton" href = "https://github.com/michaeldurfey" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-github-square fa-lg fa-fw"></i>Github</a>
-          <a class = "btn btn-default" id = "socialButton" href = "https://twitter.com/Michaelpietro_" role= "button" target = "_blank" style = "font-family: raleway;"><i class = "fa fa-twitter-square fa-lg fa-fw"></i>Twitter</a>
+          <a class = "btn " role = "button" target = "_blank" href = "https://www.linkedin.com/in/michael-durfey-5bb67736" id = "socialButton"><i class = "fa fa-linkedin-square fa-lg fa-fw"></i>Linkedin</a>
+          <a class = "btn " id = "socialButton" href = "https://www.facebook.com/michael.pietro" role = "button" target = "_blank"><i class = "fa fa-facebook-square fa-lg fa-fw"></i>Facebook</a>
+          <a class = "btn " id = "socialButton" href = "https://github.com/michaeldurfey" role= "button" target = "_blank" ><i class = "fa fa-github-square fa-lg fa-fw"></i>Github</a>
+          <a class = "btn " id = "socialButton" href = "https://twitter.com/Michaelpietro_" role= "button" target = "_blank"><i class = "fa fa-twitter-square fa-lg fa-fw"></i>Twitter</a>
           
         </div>
-          <h3 class = "WebDev text-center">Web Developer - UX Designer</h3> 
+          <!-- <h3 class = "WebDev text-center">Web Developer - UX Designer</h3>  -->
       </div>
     </div>
   </div>
@@ -72,15 +72,21 @@
       <div class = "row">
         <div class = "portRow">
         <div class = "figure">
-            <img src="/images/recipebook.png" class=" rounded text-center img-responsive center-block" alt="recipebook"/>
-            <div class = "face" onclick= "window.open('https://codepen.io/Mdurfey/full/MvQEKy/')">
-            <h2>Recipe Book</h2>
+            <img src="/images/FoodiGo.gif" class=" rounded text-center img-responsive center-block" alt="foodiGo"/>
+            <div class = "face" onclick= "window.open('https://github.com/FoodiGo/title-map')">
+            <h2>FoodiGo</h2>
             </div>
         </div>
         <div class = "figure">
-            <img src="/images/gameoflife.png" class=" rounded text-center img-responsive center-block" alt="gameoflife"/>
-            <div class = "face" onclick= "window.open('https://michaeldurfey.github.io/game-of-life/')">
-            <h2>The Game of Life</h2>
+            <img src="/images/reservationsComponent.jpg" class=" rounded text-center img-responsive center-block" alt="Silverspoon"/>
+            <div class = "face" onclick= "window.open('https://github.com/TrogdorSystems/reservations-component')">
+            <h2>Silverspoon</h2>
+            </div>
+        </div>
+        <div class = "figure">
+            <img src="/images/nextShow.jpg" class=" rounded text-center img-responsive center-block" alt="nextShow"/>
+            <div class = "face" onclick= "window.open('https://github.com/MichaelDurfey/NextShow')">
+            <h2>Next Show</h2>
             </div>
         </div>
         <div class = "figure">
@@ -96,6 +102,12 @@
               </div>
           </div>
           <div class = "figure">
+            <img src="/images/recipebook.png" class=" rounded text-center img-responsive center-block" alt="recipebook"/>
+            <div class = "face" onclick= "window.open('https://codepen.io/Mdurfey/full/MvQEKy/')">
+            <h2>Recipe Book</h2>
+            </div>
+        </div>
+          <div class = "figure">
               <img src="/images/PomodoroClock.jpg" class=" rounded text-center img-responsive center-block" alt="pomodoro"/>
               <div class = "face" onclick= "window.open('https://pomodoroo.herokuapp.com/')">
               <h2>Pomodoro Timer</h2>
@@ -106,13 +118,7 @@
               <div class = "face" onclick= "window.open('https://basiccalculator.herokuapp.com/')">
               <h2>Calculator</h2>
               </div>
-          </div>
-          <div class = "figure">
-              <img src="/images/weather.jpg" class="figure-img rounded portfolioPic img-responsive center-block" alt="weather app"/>
-              <div class = "face" onclick = "window.open('https://weathercurrent.herokuapp.com')">
-              <h2>Current Weather</h2>
-              </div>
-          </div>    
+          </div>  
           <div class = "figure">
               <img src="/images/twitch.jpg" class="rounded text-center img-responsive center-block" alt="Twitch App"/>
               <div class = "face" onclick = "window.open('https://twitchclone.herokuapp.com/')">
@@ -125,12 +131,6 @@
               <h2>Wikipedia Viewer</h2>
               </div>
           </div>     
-          <div class = "figure">
-              <img src="/images/quote.jpg" class="figure-img rounded text-center img-responsive center-block" alt="quote generator"/>
-              <div class = "face" onclick = "window.open('https://redditquotes.herokuapp.com/')">
-              <h2>Quote Generator</h2>
-              </div>
-          </div>
         </div>
       </div>
     </div>
@@ -140,7 +140,7 @@
 <div class = "contact-container container-fluid" id = "bottom">
 
  <div class = "col-lg-12 contactText">
-        <h2 class="h5 text-center" id = "h5">Contact</h2>       
+        <h2 class="h5 text-center" id = "contact">Contact</h2>       
         <hr class = "hr2">
     <div class = "row first-content">
       <div class = "col-lg-8 col-lg-offset-0 col-md-8 col-sm-12 col-xs-12 first-contentContainer">
@@ -188,16 +188,11 @@
         </form>  <!--form-->
 
       </div><!--col-lg-5-->
-
-    <!-- <div class = "row"> -->
     </div>
   </div>
 
   <div class = "row">
-  <div class = "musicButton" id = "musicButton">
-     <button type = "button" class = "btn btn-primary btn-primary musicButton" id = "musicButtonElement">
-     </button>
-  </div>
+
   <div class = "col-lg-12 recentTracksContainer" id = "music">
     <div class = " col-lg-4 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-12 text-center recent-tracks text-center" id = "recent-tracks">
     </div>

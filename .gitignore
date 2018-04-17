@@ -1,4 +1,4 @@
 node_modules
-javaScript.js
-config.js
 .env
+public/index.bundle.js
+public/git.DS_Store

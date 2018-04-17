@@ -9,23 +9,8 @@ var back1 = "url('/images/back2.jpg')"
 if ($('.navbar-collapse').hasClass('collapse') === true) {
   $('nav button').on('click', () => { 
     $('.collapse').toggle();
-    $('back2').toggleClass('greyBack');
   })
 }
-
-$("#musicButtonElement").html(`<i class = "fa fa-music"></i> Display Music`);
-
-$("#music").toggle(1000)
-
-$("#musicButtonElement").on("click", () => {$("#music").toggle(1000)})
-$("#musicButtonElement").on("click", () => {
-  if ($("#musicButtonElement").html() === `<i class="fa fa-music"></i> Display Music`){
-      $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Hide Music`)
-  }
-  else {
-    $("#musicButtonElement").html(`<i class = "fa fa-music"></i> Display Music`)
-  }
-});
 
 
 
@@ -121,7 +106,7 @@ $("#recent-tracks").html(`${listening}`);
 
   var topAlbumText = "";
 
-  topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month:</h1> 
+  topAlbumText += ` <h1 class = "topAlbumText" id = "topAlbumText">Top albums this month</h1> 
             `
 
   if (albumImages) {images += `
