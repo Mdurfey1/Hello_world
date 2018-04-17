@@ -106,9 +106,6 @@ div.about-container {
 }
 
 #socialButton:hover {
-    width: 12vmax;
-    font-size: 1.1vmax;
-    font-family: 'Nanum Gothic';
     color: white;
     transition-duration: .5s;
 }
@@ -813,7 +810,7 @@ form {
     }
     .nav-pills {
         float: center!important;
-        margin-left: 3%
+        margin-left: 3%;
     }
 }
 @media(max-width: 660px) {
@@ -893,8 +890,6 @@ form {
         flex-direction: row;
     }
     .footerText {
-        color: #337AB7;
-        border-bottom: #337AB7;
         border-bottom-style: solid;
         border-bottom-width: 1px;
     }
@@ -916,6 +911,7 @@ form {
         text-align: center;
         font-size: 1em;
         margin-top: 10px;
+        color: black;
     }
     .nav-pillsContainer {
         margin-top: 0
